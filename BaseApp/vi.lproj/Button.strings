@@ -1,0 +1,9 @@
+/* 
+  Button.strings
+  BaseApp
+
+  Created by Phong Nguyen on 12/12/17.
+  Copyright © 2017 Phong Nguyen. All rights reserved.
+*/
+"Change" = "Thay đổi ngôn ngữ";
+"Reset" = "ngôn ngữ mặc định";
