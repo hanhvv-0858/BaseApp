@@ -9,7 +9,6 @@
 import Foundation
 
 protocol ResponseName {
-    
 }
 
 extension ResponseName {
@@ -23,7 +22,6 @@ extension ResponseName {
 }
 
 protocol ResponseIdentifier {
-    
 }
 
 extension ResponseIdentifier {
