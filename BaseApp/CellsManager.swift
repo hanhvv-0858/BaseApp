@@ -31,6 +31,3 @@ struct CellManager<Cell> where Cell: UpdateCell, Cell: UITableViewCell {
         cell.update(cellData: dataCell)
     }
 }
-
-extension CellManager: ResponseType {}
-extension BaseCell: ResponseType {}

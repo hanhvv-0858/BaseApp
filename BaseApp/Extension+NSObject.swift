@@ -8,13 +8,10 @@
 
 import Foundation
 
-extension NSObject {
+extension NSObject: ResponseType {
     
-    var className: String {
-        return String(describing: type(of: self))
-    }
+}
+
+extension NSObject: ResponseName {
     
-    class var className: String {
-        return String(describing: self)
-    }
 }

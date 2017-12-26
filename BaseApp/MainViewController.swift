@@ -82,7 +82,7 @@ extension MainViewController: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(MainTableViewCell.self, forIndexPath: indexPath)
-            cell.configUI(viewControllers[indexPath.row].className)
+            cell.configUI(viewControllers[indexPath.row].name)
             return cell
     }
 }
