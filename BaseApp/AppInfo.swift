@@ -9,6 +9,7 @@
 import Foundation
 
 struct AppInfo {
-    static let version: String? = Bundle.main.infoDictionary?["BaseApp"] as? String
-    static let build: String? = Bundle.main.infoDictionary?["BaseApp"] as? String
+    static let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+    static let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+    static let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""
 }

@@ -18,6 +18,8 @@ class MainViewController: BaseViewController {
     // MARK: - Lifecycle View
     override func viewDidLoad() {
         super.viewDidLoad()
+        logD(AppInfo.appName)
+        setupUI()
         registerCell()
         appendData()
     }
@@ -33,6 +35,14 @@ class MainViewController: BaseViewController {
 
 // MARK: - UI Private Methods Extensions
 extension MainViewController {
+    
+    fileprivate func setupUI() {
+        self.navigationItem.title = setupAppVersion()
+    }
+    
+    fileprivate func setupAppVersion() -> String {
+        return AppInfo.appName + " " + AppInfo.version + "(" + AppInfo.build + ")"
+    }
     
     fileprivate func registerCell() {
         tableView.registerCellByNib(MainTableViewCell.self)

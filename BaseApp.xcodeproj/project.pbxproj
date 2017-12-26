@@ -94,6 +94,7 @@
 		AACC8CEEC22FC6D360EAEE6A /* Pods_BaseAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8C4F23B04600F84FD5E622 /* Pods_BaseAppTests.framework */; };
 		E70BB6CA1FC7ED5700E77A52 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70BB6C91FC7ED5700E77A52 /* Extension+UIColor.swift */; };
 		E70BB6CC1FC7ED6B00E77A52 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */; };
+		E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
 		E7FD7DEC1FC679E70050EB06 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DEB1FC679E70050EB06 /* Extension+UIViewController.swift */; };
 		E7FD7DEE1FC679FE0050EB06 /* Extension+UITableViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DED1FC679FE0050EB06 /* Extension+UITableViewX.swift */; };
@@ -239,6 +240,7 @@
 		D842B1A5B981FAD8BE804CE3 /* Pods-BaseAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppUITests/Pods-BaseAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E70BB6C91FC7ED5700E77A52 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseName.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		E7FD7DEB1FC679E70050EB06 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		E7FD7DED1FC679FE0050EB06 /* Extension+UITableViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewX.swift"; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 				E7FD7E011FC683BA0050EB06 /* Extension+POP.swift */,
 				A61E0F811FE14E5F00BA2C55 /* ResponseModel.swift */,
 				A6B304D31FE6378800053CA4 /* ResponseType.swift */,
+				E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */,
 			);
 			name = ExtensionPOP;
 			sourceTree = "<group>";
@@ -1143,6 +1146,7 @@
 				E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */,
 				A67B49D71FDFEEAC00F81588 /* ModelKVO.swift in Sources */,
 				E7FD7DF01FC67A1F0050EB06 /* Extension+UITableView.swift in Sources */,
+				E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */,
 				E7FD7E1A1FC6E3640050EB06 /* LocationManager.swift in Sources */,
 				A6D51FCE1F65792000FA4851 /* UIViewXRadialGarient.swift in Sources */,
 				E7FD7E091FC687730050EB06 /* UserViewViewController.swift in Sources */,
