@@ -25,15 +25,15 @@ public func logDJSON(_ object: AnyObject, functionName: String = #function, file
         formatter.dateFormat = "HH:mm:ss"
         
         let date = formatter.string(from: NSDate() as Date)
-        print("⚠️ [\(date)] <\(className)> \(functionName) [#\(lineNumber)] \n\( printJSON(value: object) ?? "Object is nil")\n")
+        print("⚠️ [\(date)] <\(className)> \(functionName) [#\(lineNumber)] \n\( jsonString(value: object) ?? "Object is nil")\n")
     #endif
 }
 
-private func printJSON(value: AnyObject, prettyPrinted: Bool = true) -> String? {
-    let options = prettyPrinted ? JSONSerialization.WritingOptions.prettyPrinted : nil
+private func jsonString(value: AnyObject) -> String? {
+    let options = JSONSerialization.WritingOptions.prettyPrinted
     if JSONSerialization.isValidJSONObject(value) {
         do {
-            let data = try JSONSerialization.data(withJSONObject: value, options: options!)
+            let data = try JSONSerialization.data(withJSONObject: value, options: options)
             if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
                 return string as String
             }
