@@ -18,7 +18,6 @@ class MainViewController: BaseViewController {
     // MARK: - Lifecycle View
     override func viewDidLoad() {
         super.viewDidLoad()
-        logD(AppInfo.appName)
         setupUI()
         registerCell()
         appendData()
@@ -51,10 +50,13 @@ extension MainViewController {
     fileprivate func appendData() {
         viewControllers.append(ExampleAlertViewController.fromNib())
         viewControllers.append(ExampleOpenUIPickerController.fromNib())
-        viewControllers.append(ExampleViewController.fromNib())
+        viewControllers.append(ExampleHideKeyBoardTextFieldViewController.fromNib())
         viewControllers.append(MultiLanguageViewController.fromNib())
         viewControllers.append(ExampleTargetClosureViewController.fromNib())
         viewControllers.append(ExampleKVOViewController.fromNib())
+        viewControllers.append(OpenOfficeViewController.fromNib())
+        viewControllers.append(KeyboardSmart.fromNib())
+        viewControllers.append(ScrollKeyboardVViewController.fromNib())
         tableView.reloadData()
     }
     

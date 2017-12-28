@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="9.4452773613193415"/>
         </scene>
-        <!--Main Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="kb9-HA-dZK">
             <objects>
                 <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Nnu-DD-HUv" customClass="MainNavigationController" customModule="BaseApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,10 +58,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="sxY-yY-0cn" id="AnI-ee-Fee"/>
                         <segue destination="zrL-SZ-LUx" kind="relationship" relationship="rootViewController" id="41C-pD-Igv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwU-yz-RYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="sxY-yY-0cn" customClass="Swipe" customModule="BaseApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="navigationController" destination="Nnu-DD-HUv" id="cVA-Cs-3cT"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-106" y="9"/>
         </scene>

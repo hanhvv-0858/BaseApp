@@ -14,8 +14,8 @@
 		A62213CB1FDEC60400622E00 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62213CA1FDEC60400622E00 /* Launch Screen.storyboard */; };
 		A6778BDA1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6778BD81FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.xib */; };
 		A6778BDB1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778BD91FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift */; };
-		A6778BDF1FDEF15400DD9BC8 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6778BDD1FDEF15400DD9BC8 /* ExampleViewController.xib */; };
-		A6778BE01FDEF15400DD9BC8 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778BDE1FDEF15400DD9BC8 /* ExampleViewController.swift */; };
+		A6778BDF1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6778BDD1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib */; };
+		A6778BE01FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778BDE1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift */; };
 		A6778BE41FDEF2F300DD9BC8 /* MultiLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6778BE21FDEF2F300DD9BC8 /* MultiLanguageViewController.xib */; };
 		A6778BE51FDEF2F300DD9BC8 /* MultiLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778BE31FDEF2F300DD9BC8 /* MultiLanguageViewController.swift */; };
 		A6778BEA1FDEF34E00DD9BC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6778BEC1FDEF34E00DD9BC8 /* Localizable.strings */; };
@@ -94,9 +94,27 @@
 		AACC8CEEC22FC6D360EAEE6A /* Pods_BaseAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8C4F23B04600F84FD5E622 /* Pods_BaseAppTests.framework */; };
 		E70BB6CA1FC7ED5700E77A52 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70BB6C91FC7ED5700E77A52 /* Extension+UIColor.swift */; };
 		E70BB6CC1FC7ED6B00E77A52 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */; };
+		E745C9FA1FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C9F81FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift */; };
+		E745C9FB1FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E745C9F91FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib */; };
+		E745C9FD1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C9FC1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift */; };
+		E745C9FF1FF4D71300DC5496 /* SwipeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */; };
+		E745CA011FF4D73700DC5496 /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745CA001FF4D73700DC5496 /* Swipe.swift */; };
 		E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */; };
+		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
+		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
+		E78856CE1FFC6CD500420F90 /* DesignPatterns.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
+		E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */; };
+		E7F1CC081FFDEA1B007E6810 /* TableViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */; };
+		E7F1CC0A1FFDEA80007E6810 /* CollectionViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */; };
+		E7F1CC0C1FFDEAF3007E6810 /* ScrollViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */; };
+		E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */; };
+		E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */; };
+		E7F1CC141FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC121FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift */; };
+		E7F1CC151FFDEFE4007E6810 /* KeyboardSmartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC131FFDEFE4007E6810 /* KeyboardSmartTableViewCell.xib */; };
+		E7F1CC181FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC161FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift */; };
+		E7F1CC191FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC171FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib */; };
 		E7FD7DEC1FC679E70050EB06 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DEB1FC679E70050EB06 /* Extension+UIViewController.swift */; };
 		E7FD7DEE1FC679FE0050EB06 /* Extension+UITableViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DED1FC679FE0050EB06 /* Extension+UITableViewX.swift */; };
 		E7FD7DF01FC67A1F0050EB06 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DEF1FC67A1F0050EB06 /* Extension+UITableView.swift */; };
@@ -151,8 +169,8 @@
 		A62213CA1FDEC60400622E00 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A6778BD81FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleOpenUIPickerController.xib; sourceTree = "<group>"; };
 		A6778BD91FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOpenUIPickerController.swift; sourceTree = "<group>"; };
-		A6778BDD1FDEF15400DD9BC8 /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
-		A6778BDE1FDEF15400DD9BC8 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		A6778BDD1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleHideKeyBoardTextFieldViewController.xib; sourceTree = "<group>"; };
+		A6778BDE1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHideKeyBoardTextFieldViewController.swift; sourceTree = "<group>"; };
 		A6778BE21FDEF2F300DD9BC8 /* MultiLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiLanguageViewController.xib; sourceTree = "<group>"; };
 		A6778BE31FDEF2F300DD9BC8 /* MultiLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLanguageViewController.swift; sourceTree = "<group>"; };
 		A6778BEB1FDEF34E00DD9BC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -241,9 +259,28 @@
 		D842B1A5B981FAD8BE804CE3 /* Pods-BaseAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppUITests/Pods-BaseAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E70BB6C91FC7ED5700E77A52 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		E745C9F81FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnyWhereViewController.swift; sourceTree = "<group>"; };
+		E745C9F91FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeAnyWhereViewController.xib; sourceTree = "<group>"; };
+		E745C9FC1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeGustureRecognizer.swift; sourceTree = "<group>"; };
+		E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimation.swift; sourceTree = "<group>"; };
+		E745CA001FF4D73700DC5496 /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseName.swift; sourceTree = "<group>"; };
+		E78856C71FFC652B00420F90 /* demo.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo.xlsx; sourceTree = "<group>"; };
+		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
+		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
+		E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DesignPatterns.pdf; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
+		E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
+		E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSmart.swift; sourceTree = "<group>"; };
+		E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSmart.swift; sourceTree = "<group>"; };
+		E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSmart.swift; sourceTree = "<group>"; };
+		E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmart.swift; sourceTree = "<group>"; };
+		E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardSmart.xib; sourceTree = "<group>"; };
+		E7F1CC121FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmartTableViewCell.swift; sourceTree = "<group>"; };
+		E7F1CC131FFDEFE4007E6810 /* KeyboardSmartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardSmartTableViewCell.xib; sourceTree = "<group>"; };
+		E7F1CC161FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollKeyboardVViewController.swift; sourceTree = "<group>"; };
+		E7F1CC171FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollKeyboardVViewController.xib; sourceTree = "<group>"; };
 		E7FD7DEB1FC679E70050EB06 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		E7FD7DED1FC679FE0050EB06 /* Extension+UITableViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewX.swift"; sourceTree = "<group>"; };
 		E7FD7DEF1FC67A1F0050EB06 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
@@ -328,13 +365,13 @@
 			name = ExampleOpenUIPicker;
 			sourceTree = "<group>";
 		};
-		A6778BDC1FDEF12C00DD9BC8 /* ExampleHideKeyBoard */ = {
+		A6778BDC1FDEF12C00DD9BC8 /* ExampleHideKeyBoardTextField */ = {
 			isa = PBXGroup;
 			children = (
-				A6778BDD1FDEF15400DD9BC8 /* ExampleViewController.xib */,
-				A6778BDE1FDEF15400DD9BC8 /* ExampleViewController.swift */,
+				A6778BDD1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib */,
+				A6778BDE1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift */,
 			);
-			name = ExampleHideKeyBoard;
+			name = ExampleHideKeyBoardTextField;
 			sourceTree = "<group>";
 		};
 		A6778BE11FDEF2D000DD9BC8 /* ExampleMultiLanguage */ = {
@@ -365,7 +402,7 @@
 			name = ExampleKVO;
 			sourceTree = "<group>";
 		};
-		A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableViewController */ = {
+		A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableView */ = {
 			isa = PBXGroup;
 			children = (
 				A6B304D51FE65CE600053CA4 /* UITableViewCells */,
@@ -373,7 +410,7 @@
 				A6B304CF1FE62ED700053CA4 /* MultiCellViewController.xib */,
 				A6B304D01FE62ED700053CA4 /* MultiCellViewController.swift */,
 			);
-			name = ExampleMultiCellTableViewController;
+			name = ExampleMultiCellTableView;
 			sourceTree = "<group>";
 		};
 		A6B304D51FE65CE600053CA4 /* UITableViewCells */ = {
@@ -390,15 +427,18 @@
 		A6BB8C571FDEA22A0013619F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableViewController */,
+				E7F1CC0D1FFDEF4B007E6810 /* Keyboard */,
+				E78856C81FFC666C00420F90 /* OpenOfice */,
+				E745C9F71FF4D69A00DC5496 /* SwipeAnyWhere */,
+				A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableView */,
 				A67B49D11FDFEE6700F81588 /* ExampleKVO */,
 				A67B49CC1FDFEB0300F81588 /* ExampleActionClosure */,
 				A6778BE11FDEF2D000DD9BC8 /* ExampleMultiLanguage */,
-				A6778BDC1FDEF12C00DD9BC8 /* ExampleHideKeyBoard */,
+				A6778BDC1FDEF12C00DD9BC8 /* ExampleHideKeyBoardTextField */,
 				A6778BD71FDEEC3E00DD9BC8 /* ExampleOpenUIPicker */,
 				A6BB8C581FDEA2360013619F /* ExampleAlert */,
 				A6D75D8A1FEDED2C0091E6D4 /* Chatwork */,
-				A6D75D891FEDED200091E6D4 /* New Group */,
+				A6D75D891FEDED200091E6D4 /* ExampleGesture */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -518,6 +558,7 @@
 		A6D51F731F65612600FA4851 /* File */ = {
 			isa = PBXGroup;
 			children = (
+				E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */,
 				A6D51FDC1F65798100FA4851 /* .swiftlint.yml */,
 				A6D51FE01F65810800FA4851 /* GoogleService-Info.plist */,
 				A6778BEC1FDEF34E00DD9BC8 /* Localizable.strings */,
@@ -551,6 +592,7 @@
 		A6D51F761F65614A00FA4851 /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				E78856C71FFC652B00420F90 /* demo.xlsx */,
 				A6D51F771F65619000FA4851 /* LogD.swift */,
 				A6D51F791F65624500FA4851 /* LoadingJSON.swift */,
 				A6D51F7B1F65629600FA4851 /* Constants.swift */,
@@ -570,6 +612,7 @@
 		A6D51F8A1F65664000FA4851 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E7F1CC041FFDE9D5007E6810 /* Keyboard */,
 				E7FD7DF91FC680520050EB06 /* UKit */,
 				E7FD7DF61FC680110050EB06 /* MapKit */,
 				E7FD7DFA1FC680660050EB06 /* Foudation */,
@@ -643,11 +686,11 @@
 			name = API;
 			sourceTree = "<group>";
 		};
-		A6D75D891FEDED200091E6D4 /* New Group */ = {
+		A6D75D891FEDED200091E6D4 /* ExampleGesture */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "New Group";
+			name = ExampleGesture;
 			sourceTree = "<group>";
 		};
 		A6D75D8A1FEDED2C0091E6D4 /* Chatwork */ = {
@@ -683,6 +726,51 @@
 				A6D51F861F65654D00FA4851 /* StartViewController.swift */,
 			);
 			name = StartViewController;
+			sourceTree = "<group>";
+		};
+		E745C9F71FF4D69A00DC5496 /* SwipeAnyWhere */ = {
+			isa = PBXGroup;
+			children = (
+				E745C9F81FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift */,
+				E745C9F91FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib */,
+				E745C9FC1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift */,
+				E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */,
+				E745CA001FF4D73700DC5496 /* Swipe.swift */,
+			);
+			name = SwipeAnyWhere;
+			sourceTree = "<group>";
+		};
+		E78856C81FFC666C00420F90 /* OpenOfice */ = {
+			isa = PBXGroup;
+			children = (
+				E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */,
+				E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */,
+			);
+			name = OpenOfice;
+			sourceTree = "<group>";
+		};
+		E7F1CC041FFDE9D5007E6810 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */,
+				E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */,
+				E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */,
+				E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		E7F1CC0D1FFDEF4B007E6810 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */,
+				E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */,
+				E7F1CC121FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift */,
+				E7F1CC131FFDEFE4007E6810 /* KeyboardSmartTableViewCell.xib */,
+				E7F1CC161FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift */,
+				E7F1CC171FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib */,
+			);
+			name = Keyboard;
 			sourceTree = "<group>";
 		};
 		E7FD7DF51FC67CB60050EB06 /* CoreApp */ = {
@@ -892,17 +980,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6778BDA1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.xib in Resources */,
-				A6778BDF1FDEF15400DD9BC8 /* ExampleViewController.xib in Resources */,
+				A6778BDF1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib in Resources */,
 				A6778BE41FDEF2F300DD9BC8 /* MultiLanguageViewController.xib in Resources */,
 				A6778BEA1FDEF34E00DD9BC8 /* Localizable.strings in Resources */,
 				A6D75D871FEDED140091E6D4 /* ChatWorkViewController.xib in Resources */,
 				A6D51FAA1F65725400FA4851 /* MainTableViewCell.xib in Resources */,
+				E7F1CC151FFDEFE4007E6810 /* KeyboardSmartTableViewCell.xib in Resources */,
 				A6B304DD1FE65D2B00053CA4 /* ImageTableViewCell.xib in Resources */,
 				A6D51FE11F65810800FA4851 /* GoogleService-Info.plist in Resources */,
 				A6B304D81FE65D1200053CA4 /* TextTableViewCell.xib in Resources */,
 				A67B49CF1FDFEB3C00F81588 /* ExampleTargetClosureViewController.xib in Resources */,
+				E745C9FB1FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib in Resources */,
 				A6D51F9D1F656C2600FA4851 /* Login+Register.storyboard in Resources */,
 				A67B49D41FDFEE8300F81588 /* ExampleKVOViewController.xib in Resources */,
+				E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */,
+				E78856CE1FFC6CD500420F90 /* DesignPatterns.pdf in Resources */,
+				E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */,
 				A6D51FDD1F65798100FA4851 /* .swiftlint.yml in Resources */,
 				A6D51F491F655DA500FA4851 /* Assets.xcassets in Resources */,
 				A6D51F441F655DA500FA4851 /* Main.storyboard in Resources */,
@@ -912,6 +1005,7 @@
 				A62213CB1FDEC60400622E00 /* Launch Screen.storyboard in Resources */,
 				A6D51F9F1F656C7500FA4851 /* Main+App.storyboard in Resources */,
 				A6778BEF1FDEF37500DD9BC8 /* Button.strings in Resources */,
+				E7F1CC191FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1224,8 @@
 			files = (
 				A6D51FA91F65725400FA4851 /* MainTableViewCell.swift in Sources */,
 				E7FD7DF81FC680320050EB06 /* Extension+MKMapView.swift in Sources */,
+				E7F1CC0A1FFDEA80007E6810 /* CollectionViewSmart.swift in Sources */,
+				E745C9FF1FF4D71300DC5496 /* SwipeAnimation.swift in Sources */,
 				A6D51F9B1F656A6000FA4851 /* LoginViewController.swift in Sources */,
 				E7FD7E151FC6996F0050EB06 /* Extension+UIPickerController.swift in Sources */,
 				E7FD7DF21FC67A2F0050EB06 /* Extension+UIView.swift in Sources */,
@@ -1140,6 +1236,7 @@
 				A6D51F7C1F65629600FA4851 /* Constants.swift in Sources */,
 				A6D51FD71F65792D00FA4851 /* UIMenuItemX.swift in Sources */,
 				A6D51F911F65680D00FA4851 /* ReadNetworking.swift in Sources */,
+				E7F1CC141FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift in Sources */,
 				A6D51FA11F656F5B00FA4851 /* CoreDataManager.swift in Sources */,
 				A6D51FD51F65792D00FA4851 /* UIButtonX.swift in Sources */,
 				E7FD7E0B1FC688430050EB06 /* Infomation.swift in Sources */,
@@ -1150,10 +1247,13 @@
 				E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */,
 				A67B49D71FDFEEAC00F81588 /* ModelKVO.swift in Sources */,
 				E7FD7DF01FC67A1F0050EB06 /* Extension+UITableView.swift in Sources */,
+				E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */,
 				E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */,
 				E7FD7E1A1FC6E3640050EB06 /* LocationManager.swift in Sources */,
+				E745C9FA1FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift in Sources */,
 				A6D51FCE1F65792000FA4851 /* UIViewXRadialGarient.swift in Sources */,
 				E7FD7E091FC687730050EB06 /* UserViewViewController.swift in Sources */,
+				E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */,
 				A6D51FBC1F65791400FA4851 /* TabBarX.swift in Sources */,
 				A6D51FB91F65791400FA4851 /* NavigationBarX.swift in Sources */,
 				A6D75D8C1FEDED740091E6D4 /* LoginChatworkRouter.swift in Sources */,
@@ -1178,33 +1278,39 @@
 				A6D51F471F655DA500FA4851 /* BaseApp.xcdatamodeld in Sources */,
 				A6BB8C5C1FDEA26E0013619F /* ExampleAlertViewController.swift in Sources */,
 				A6B304D91FE65D1200053CA4 /* TextTableViewCell.swift in Sources */,
-				A6778BE01FDEF15400DD9BC8 /* ExampleViewController.swift in Sources */,
+				A6778BE01FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift in Sources */,
 				A6D51FD61F65792D00FA4851 /* UILabelX.swift in Sources */,
 				A6D51FBA1F65791400FA4851 /* SearchBarX.swift in Sources */,
+				E7F1CC181FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift in Sources */,
 				E7FD7E051FC684810050EB06 /* UserModel.swift in Sources */,
 				A62213C91FDEC49A00622E00 /* MainNavigationController.swift in Sources */,
 				A6D51F801F65632F00FA4851 /* AppRouter.swift in Sources */,
 				A6D51FBB1F65791400FA4851 /* StatusBarX.swift in Sources */,
 				A6D51F871F65654D00FA4851 /* StartViewController.swift in Sources */,
 				A6D51F841F6564EA00FA4851 /* RootViewConfig.swift in Sources */,
+				E7F1CC0C1FFDEAF3007E6810 /* ScrollViewSmart.swift in Sources */,
 				A6D51F971F65695800FA4851 /* Popable.swift in Sources */,
 				A67B49D01FDFEB3C00F81588 /* ExampleTargetClosureViewController.swift in Sources */,
 				A6778BDB1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift in Sources */,
 				A6D51FDA1F65793600FA4851 /* PulseAnimation.swift in Sources */,
 				E7FD7E111FC68F3F0050EB06 /* AppInfo.swift in Sources */,
+				E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */,
 				A6B304CE1FE62DCB00053CA4 /* CellsManager.swift in Sources */,
 				A6D51F3F1F655DA500FA4851 /* AppDelegate.swift in Sources */,
 				A6D51FC91F65792000FA4851 /* UIViewX.swift in Sources */,
 				A6D51FC71F65792000FA4851 /* UIViewControllerX.swift in Sources */,
 				A6D51FA61F656FF500FA4851 /* ConfigApp.swift in Sources */,
 				A6B304D21FE62ED700053CA4 /* MultiCellViewController.swift in Sources */,
+				E745CA011FF4D73700DC5496 /* Swipe.swift in Sources */,
 				E7FD7DEE1FC679FE0050EB06 /* Extension+UITableViewX.swift in Sources */,
 				A6D51FC81F65792000FA4851 /* UIVisualEffectViewX.swift in Sources */,
+				E7F1CC081FFDEA1B007E6810 /* TableViewSmart.swift in Sources */,
 				E7FD7DFD1FC682930050EB06 /* UsersModel.swift in Sources */,
 				A6D75D881FEDED140091E6D4 /* ChatWorkViewController.swift in Sources */,
 				A6D51F821F65636700FA4851 /* OAthhandler.swift in Sources */,
 				A6D51FCC1F65792000FA4851 /* UITextFieldX.swift in Sources */,
 				A6D51FDF1F657E4100FA4851 /* Extension+String.swift in Sources */,
+				E745C9FD1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift in Sources */,
 				E70BB6CC1FC7ED6B00E77A52 /* Extension+UIFont.swift in Sources */,
 				A6D51FD41F65792D00FA4851 /* UIButtonPulse.swift in Sources */,
 				E7FD7E021FC683BA0050EB06 /* Extension+POP.swift in Sources */,
@@ -1383,6 +1489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X434ZY3ENZ;
 				INFOPLIST_FILE = BaseApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nguyenphong.mobiledev.BaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1397,6 +1504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X434ZY3ENZ;
 				INFOPLIST_FILE = BaseApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nguyenphong.mobiledev.BaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

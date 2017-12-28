@@ -58,4 +58,8 @@ extension UITableView {
     func dequeueCell<T: UITableViewCell>(_ type: T.Type, forIndexPath indexPath: IndexPath) -> T {
         return dequeueReusableCell(withIdentifier: type.identifier, for: indexPath) as! T
     }
+    
+    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ type: T.Type) -> T {
+        return dequeueReusableHeaderFooterView(withIdentifier: type.identifier) as! T
+    }
 }

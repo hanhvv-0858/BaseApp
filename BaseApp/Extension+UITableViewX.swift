@@ -34,4 +34,8 @@ extension UITableViewHeaderFooterView {
     class var identifier: String {
         return String(describing: self)
     }
+    
+    class func dequeueReusableHeaderFooterView(_ tableView: UITableView, indexPath: IndexPath) -> Self {
+        return tableView.dequeueReusableHeaderFooterView(self)
+    }
 }
