@@ -8,99 +8,108 @@
 
 import UIKit
 
-
 // MARK: - CollectionView
-class UICollectionViewSmart: UICollectionView, UITextViewDelegate {
+class UICollectionViewSmart: UICollectionView {
     
     override var contentSize: CGSize {
         willSet(newValue) {
-            if newValue.equalTo(self.contentSize) {
+            if newValue.equalTo(contentSize) {
                 return
             }
             super.contentSize = newValue
-            TPKeyboardAvoiding_updateContentInset()
+            keyboard_updateContentInset()
         }
     }
     
     
-    override var frame:CGRect{
-        willSet{
+    override var frame: CGRect{
+        willSet(newValue) {
+            if newValue.equalTo(self.frame) {
+                return
+            }
             super.frame = frame
-        }
-        
-        didSet {
-            TPKeyboardAvoiding_updateContentInset()
+            keyboard_updateContentInset()
         }
     }
-    
-    //    override init(frame: CGRect) {
-    //        super.init(frame: frame)
-    //    }
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-        setup()
+        registerObserver()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        //        fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
-        self.setup()
+        registerObserver()
         
     }
     
     override func awakeFromNib() {
-        setup()
+        super.awakeFromNib()
+        registerObserver()
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    func focusNextTextField() -> Bool {
-        return self.TPKeyboardAvoiding_focusNextTextField()
-    }
-    
-    func scrollToActiveTextField() {
-        return self.TPKeyboardAvoiding_scrollToActiveTextField()
+        removeObserver()
     }
     
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
-            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), object: self)
+            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.TPKeyboardAvoiding_findFirstResponderBeneathView(self)?.resignFirstResponder()
+        hideKeyBoard()
         super.touchesEnded(touches, with: event)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if !self.focusNextTextField() {
-            textField.resignFirstResponder()
-        }
-        return true
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), object: self)
-        
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
     }
 }
 
-private extension UICollectionViewSmart {
-    func setup() {
+extension UICollectionViewSmart: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if !focusNextTextField() {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+extension UICollectionViewSmart: UITextViewDelegate {
+    
+}
+
+extension UICollectionViewSmart {
+    
+    fileprivate func hideKeyBoard() {
+        keyboard_findFirstResponderBeneathView(self)?.resignFirstResponder()
+    }
+    
+    fileprivate func focusNextTextField() -> Bool {
+        return keyboard_focusNextTextField()
+    }
+    
+    @objc fileprivate func scrollToActiveTextField() {
+        return keyboard_scrollToActiveTextField()
+    }
+    
+    fileprivate func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    fileprivate func registerObserver() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(TPKeyboardAvoiding_keyboardWillShow(_:)),
+                                               selector: #selector(keyboard_keyboardWillShow(_:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
         
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(TPKeyboardAvoiding_keyboardWillHide(_:)),
+                                               selector: #selector(keyboard_keyboardWillHide(_:)),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
         

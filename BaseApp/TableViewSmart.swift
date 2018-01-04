@@ -10,74 +10,95 @@ import UIKit
 
 
 // MARK: - TableView
-class UITableViewSmart: UITableView, UITextViewDelegate {
+class UITableViewSmart: UITableView {
     
     override var frame: CGRect {
-        willSet {
+        willSet(newValue) {
+            if newValue.equalTo(frame) {
+                return
+            }
             super.frame = frame
         }
-        
         didSet {
             if hasAutomaticKeyboardAvoidingBehaviour() {return}
-            TPKeyboardAvoiding_updateContentInset()
+            keyboard_updateContentInset()
         }
     }
     
     override var contentSize: CGSize {
         willSet(newValue) {
+            if newValue.equalTo(contentSize) {
+                return
+            }
             if hasAutomaticKeyboardAvoidingBehaviour() {
                 super.contentSize = newValue
                 return
             }
-            
-            if newValue.equalTo(contentSize) {
-                return
-            }
             super.contentSize = newValue
         }
-        
         didSet {
-            TPKeyboardAvoiding_updateContentInset()
+            keyboard_updateContentInset()
         }
     }
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
-        setup()
+        registerObserver()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        registerObserver()
     }
     
     override func awakeFromNib() {
-        setup()
+        registerObserver()
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        removeObserver()
     }
     
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
-            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), object: self)
+            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.TPKeyboardAvoiding_findFirstResponderBeneathView(self)?.resignFirstResponder()
+        hideKeyBoard()
         super.touchesEnded(touches, with: event)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), object: self)
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
+}
+
+extension UITableViewSmart: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if !focusNextTextField() {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+extension UITableViewSmart: UITextViewDelegate {
+    
+}
+
+extension UITableViewSmart {
+    
+    fileprivate func hideKeyBoard() {
+        keyboard_findFirstResponderBeneathView(self)?.resignFirstResponder()
     }
     
-    func hasAutomaticKeyboardAvoidingBehaviour()->Bool {
+    fileprivate func hasAutomaticKeyboardAvoidingBehaviour()->Bool {
         if #available(iOS 8.3, *) {
             if self.delegate is UITableViewController {
                 return true
@@ -86,35 +107,27 @@ class UITableViewSmart: UITableView, UITextViewDelegate {
         return false
     }
     
-    func focusNextTextField()->Bool {
-        return self.TPKeyboardAvoiding_focusNextTextField()
+    fileprivate func focusNextTextField()->Bool {
+        return keyboard_focusNextTextField()
     }
     
-    func scrollToActiveTextField() {
-        return self.TPKeyboardAvoiding_scrollToActiveTextField()
+    @objc fileprivate func scrollToActiveTextField() {
+        return keyboard_scrollToActiveTextField()
     }
-}
 
-extension UITableViewSmart: UITextFieldDelegate {
+    fileprivate func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
+    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if !self.focusNextTextField() {
-            textField.resignFirstResponder()
-        }
-        return true
-    }
-}
-
-extension UITableViewSmart {
-    fileprivate func setup() {
+    fileprivate func registerObserver() {
         if hasAutomaticKeyboardAvoidingBehaviour() { return }
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(TPKeyboardAvoiding_keyboardWillShow(_:)),
+                                               selector: #selector(keyboard_keyboardWillShow(_:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
         
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(TPKeyboardAvoiding_keyboardWillHide(_:)),
+                                               selector: #selector(keyboard_keyboardWillHide(_:)),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
         
