@@ -102,7 +102,6 @@
 		E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */; };
 		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
-		E78856CE1FFC6CD500420F90 /* DesignPatterns.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
 		E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */; };
@@ -123,7 +122,7 @@
 		E7FD7DF81FC680320050EB06 /* Extension+MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DF71FC680320050EB06 /* Extension+MKMapView.swift */; };
 		E7FD7DFD1FC682930050EB06 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DFC1FC682930050EB06 /* UsersModel.swift */; };
 		E7FD7E001FC682F90050EB06 /* ConfigAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7DFF1FC682F90050EB06 /* ConfigAlamofire.swift */; };
-		E7FD7E021FC683BA0050EB06 /* Extension+POP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7E011FC683BA0050EB06 /* Extension+POP.swift */; };
+		E7FD7E021FC683BA0050EB06 /* ExtensionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7E011FC683BA0050EB06 /* ExtensionProtocol.swift */; };
 		E7FD7E051FC684810050EB06 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7E041FC684810050EB06 /* UserModel.swift */; };
 		E7FD7E071FC6874B0050EB06 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7E061FC6874B0050EB06 /* UserViewModel.swift */; };
 		E7FD7E091FC687730050EB06 /* UserViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD7E081FC687730050EB06 /* UserViewViewController.swift */; };
@@ -265,10 +264,8 @@
 		E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimation.swift; sourceTree = "<group>"; };
 		E745CA001FF4D73700DC5496 /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseName.swift; sourceTree = "<group>"; };
-		E78856C71FFC652B00420F90 /* demo.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo.xlsx; sourceTree = "<group>"; };
 		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
-		E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DesignPatterns.pdf; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
@@ -289,7 +286,7 @@
 		E7FD7DF71FC680320050EB06 /* Extension+MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+MKMapView.swift"; sourceTree = "<group>"; };
 		E7FD7DFC1FC682930050EB06 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		E7FD7DFF1FC682F90050EB06 /* ConfigAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigAlamofire.swift; sourceTree = "<group>"; };
-		E7FD7E011FC683BA0050EB06 /* Extension+POP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+POP.swift"; sourceTree = "<group>"; };
+		E7FD7E011FC683BA0050EB06 /* ExtensionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProtocol.swift; sourceTree = "<group>"; };
 		E7FD7E041FC684810050EB06 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E7FD7E061FC6874B0050EB06 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E7FD7E081FC687730050EB06 /* UserViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +399,32 @@
 			name = ExampleKVO;
 			sourceTree = "<group>";
 		};
+		A6B256D02007779D00899073 /* SwipeAction */ = {
+			isa = PBXGroup;
+			children = (
+				E745C9FC1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift */,
+				E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */,
+				E745CA001FF4D73700DC5496 /* Swipe.swift */,
+			);
+			name = SwipeAction;
+			sourceTree = "<group>";
+		};
+		A6B256D1200777EE00899073 /* AppInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD7E101FC68F3F0050EB06 /* AppInfo.swift */,
+			);
+			name = AppInfo;
+			sourceTree = "<group>";
+		};
+		A6B256D2200777FD00899073 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD7E161FC699DD0050EB06 /* ObservableStatus.swift */,
+			);
+			name = Signal;
+			sourceTree = "<group>";
+		};
 		A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +450,8 @@
 		A6BB8C571FDEA22A0013619F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E7FD7DFB1FC682800050EB06 /* Test */,
+				E72014781FCD783A0071BA7A /* Login */,
 				E7F1CC0D1FFDEF4B007E6810 /* Keyboard */,
 				E78856C81FFC666C00420F90 /* OpenOfice */,
 				E745C9F71FF4D69A00DC5496 /* SwipeAnyWhere */,
@@ -477,19 +502,13 @@
 		A6D51F3D1F655DA500FA4851 /* BaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				E7FD7DFE1FC682C60050EB06 /* ConfigLibrary */,
 				E7FD7DF51FC67CB60050EB06 /* CoreApp */,
-				A6D51FE51F65902B00FA4851 /* API */,
-				A6D51F921F65691D00FA4851 /* AppHelper */,
-				A6D51F8D1F65673400FA4851 /* DesignableX */,
-				A6D51F8A1F65664000FA4851 /* Extensions */,
 				A6D51F761F65614A00FA4851 /* Systems */,
-				A6D51F751F65614100FA4851 /* Cell */,
 				A6D51F741F65613000FA4851 /* MVVMC */,
 				A6D51F731F65612600FA4851 /* File */,
 				A6D51F6F1F65604E00FA4851 /* AppConfiguration */,
 				A6D51F701F65605B00FA4851 /* Storyboard */,
-				A6D51F711F65606300FA4851 /* CoreData */,
+				A6D51F711F65606300FA4851 /* StoreData */,
 			);
 			path = BaseApp;
 			sourceTree = "<group>";
@@ -536,29 +555,28 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		A6D51F711F65606300FA4851 /* CoreData */ = {
+		A6D51F711F65606300FA4851 /* StoreData */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51FA01F656F5B00FA4851 /* CoreDataManager.swift */,
 				A6D51F451F655DA500FA4851 /* BaseApp.xcdatamodeld */,
 			);
-			name = CoreData;
+			name = StoreData;
 			sourceTree = "<group>";
 		};
-		A6D51F721F65611700FA4851 /* ServiceHelper */ = {
+		A6D51F721F65611700FA4851 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51F7D1F6562F100FA4851 /* ApiClients.swift */,
 				A6D51F7F1F65632F00FA4851 /* AppRouter.swift */,
 				A6D51F811F65636700FA4851 /* OAthhandler.swift */,
 			);
-			name = ServiceHelper;
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		A6D51F731F65612600FA4851 /* File */ = {
 			isa = PBXGroup;
 			children = (
-				E78856CD1FFC6CD400420F90 /* DesignPatterns.pdf */,
 				A6D51FDC1F65798100FA4851 /* .swiftlint.yml */,
 				A6D51FE01F65810800FA4851 /* GoogleService-Info.plist */,
 				A6778BEC1FDEF34E00DD9BC8 /* Localizable.strings */,
@@ -570,12 +588,11 @@
 		A6D51F741F65613000FA4851 /* MVVMC */ = {
 			isa = PBXGroup;
 			children = (
+				A6D51F751F65614100FA4851 /* Cell */,
 				A6BB8C571FDEA22A0013619F /* Module */,
 				A6D51F851F65652E00FA4851 /* MainViewController */,
 				E720147A1FCD78680071BA7A /* StartViewController */,
 				E72014791FCD784D0071BA7A /* BaseViewController */,
-				E72014781FCD783A0071BA7A /* Login */,
-				E7FD7DFB1FC682800050EB06 /* Test */,
 			);
 			name = MVVMC;
 			sourceTree = "<group>";
@@ -592,8 +609,8 @@
 		A6D51F761F65614A00FA4851 /* Systems */ = {
 			isa = PBXGroup;
 			children = (
-				E78856C71FFC652B00420F90 /* demo.xlsx */,
 				A6D51F771F65619000FA4851 /* LogD.swift */,
+				E7FD7DF31FC67C8A0050EB06 /* JSONKey.swift */,
 				A6D51F791F65624500FA4851 /* LoadingJSON.swift */,
 				A6D51F7B1F65629600FA4851 /* Constants.swift */,
 			);
@@ -612,11 +629,10 @@
 		A6D51F8A1F65664000FA4851 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E7F1CC041FFDE9D5007E6810 /* Keyboard */,
 				E7FD7DF91FC680520050EB06 /* UKit */,
 				E7FD7DF61FC680110050EB06 /* MapKit */,
 				E7FD7DFA1FC680660050EB06 /* Foudation */,
-				E7FD7E031FC683C60050EB06 /* ExtensionPOP */,
+				E7FD7E031FC683C60050EB06 /* ExtensionProtocol */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -649,41 +665,22 @@
 			name = DesignableX;
 			sourceTree = "<group>";
 		};
-		A6D51F921F65691D00FA4851 /* AppHelper */ = {
-			isa = PBXGroup;
-			children = (
-				E7FD7E181FC6E3480050EB06 /* Manager */,
-				A6D51FA21F656F9B00FA4851 /* DispatchHelper */,
-				A6D51F931F65694300FA4851 /* AnimationHelper */,
-				A6D51F721F65611700FA4851 /* ServiceHelper */,
-			);
-			name = AppHelper;
-			sourceTree = "<group>";
-		};
-		A6D51F931F65694300FA4851 /* AnimationHelper */ = {
+		A6D51F931F65694300FA4851 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51F941F65695800FA4851 /* Buzzable.swift */,
 				A6D51F951F65695800FA4851 /* Popable.swift */,
 				E7FD7E121FC6953C0050EB06 /* Pagination.swift */,
 			);
-			name = AnimationHelper;
+			name = Animation;
 			sourceTree = "<group>";
 		};
-		A6D51FA21F656F9B00FA4851 /* DispatchHelper */ = {
+		A6D51FA21F656F9B00FA4851 /* Dispatch */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51FA31F656FA700FA4851 /* DispatchQueueHelper.swift */,
 			);
-			name = DispatchHelper;
-			sourceTree = "<group>";
-		};
-		A6D51FE51F65902B00FA4851 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				E7FD7DF31FC67C8A0050EB06 /* JSONKey.swift */,
-			);
-			name = API;
+			name = Dispatch;
 			sourceTree = "<group>";
 		};
 		A6D75D891FEDED200091E6D4 /* ExampleGesture */ = {
@@ -733,9 +730,6 @@
 			children = (
 				E745C9F81FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift */,
 				E745C9F91FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib */,
-				E745C9FC1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift */,
-				E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */,
-				E745CA001FF4D73700DC5496 /* Swipe.swift */,
 			);
 			name = SwipeAnyWhere;
 			sourceTree = "<group>";
@@ -776,8 +770,17 @@
 		E7FD7DF51FC67CB60050EB06 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
-				E7FD7E101FC68F3F0050EB06 /* AppInfo.swift */,
-				E7FD7E161FC699DD0050EB06 /* ObservableStatus.swift */,
+				A6D51F8A1F65664000FA4851 /* Extensions */,
+				A6D51F8D1F65673400FA4851 /* DesignableX */,
+				E7FD7DFE1FC682C60050EB06 /* ConfigLibrary */,
+				E7F1CC041FFDE9D5007E6810 /* Keyboard */,
+				A6B256D02007779D00899073 /* SwipeAction */,
+				E7FD7E181FC6E3480050EB06 /* Manager */,
+				A6D51FA21F656F9B00FA4851 /* Dispatch */,
+				A6D51F931F65694300FA4851 /* Animation */,
+				A6D51F721F65611700FA4851 /* Networking */,
+				A6B256D1200777EE00899073 /* AppInfo */,
+				A6B256D2200777FD00899073 /* Signal */,
 			);
 			name = CoreApp;
 			sourceTree = "<group>";
@@ -836,16 +839,16 @@
 			name = ConfigLibrary;
 			sourceTree = "<group>";
 		};
-		E7FD7E031FC683C60050EB06 /* ExtensionPOP */ = {
+		E7FD7E031FC683C60050EB06 /* ExtensionProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				E7FD7E011FC683BA0050EB06 /* Extension+POP.swift */,
+				E7FD7E011FC683BA0050EB06 /* ExtensionProtocol.swift */,
 				A61E0F811FE14E5F00BA2C55 /* ResponseModel.swift */,
 				A6B304D31FE6378800053CA4 /* ResponseType.swift */,
 				E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */,
 				E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */,
 			);
-			name = ExtensionPOP;
+			name = ExtensionProtocol;
 			sourceTree = "<group>";
 		};
 		E7FD7E181FC6E3480050EB06 /* Manager */ = {
@@ -994,7 +997,6 @@
 				A6D51F9D1F656C2600FA4851 /* Login+Register.storyboard in Resources */,
 				A67B49D41FDFEE8300F81588 /* ExampleKVOViewController.xib in Resources */,
 				E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */,
-				E78856CE1FFC6CD500420F90 /* DesignPatterns.pdf in Resources */,
 				E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */,
 				A6D51FDD1F65798100FA4851 /* .swiftlint.yml in Resources */,
 				A6D51F491F655DA500FA4851 /* Assets.xcassets in Resources */,
@@ -1313,7 +1315,7 @@
 				E745C9FD1FF4D6F500DC5496 /* SwipeGustureRecognizer.swift in Sources */,
 				E70BB6CC1FC7ED6B00E77A52 /* Extension+UIFont.swift in Sources */,
 				A6D51FD41F65792D00FA4851 /* UIButtonPulse.swift in Sources */,
-				E7FD7E021FC683BA0050EB06 /* Extension+POP.swift in Sources */,
+				E7FD7E021FC683BA0050EB06 /* ExtensionProtocol.swift in Sources */,
 				A6D51FCF1F65792000FA4851 /* UIProgreeBarX.swift in Sources */,
 				E7FD7E131FC6953C0050EB06 /* Pagination.swift in Sources */,
 				A6D51F7E1F6562F100FA4851 /* ApiClients.swift in Sources */,
