@@ -27,3 +27,18 @@ extension ResponseUIViewController where Self: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
     }
 }
+
+protocol ResponseUIView {
+
+}
+
+extension ResponseUIView where Self: UIView {
+    
+    static func fromNib<T: UIView>(_ type: T.Type) -> T {
+            return Bundle.main.loadNibNamed(NSStringFromClass(type), owner: nil, options: nil)!.first as! T
+        }
+        
+    static func fromNib() -> Self {
+            return fromNib(self)
+        }
+}
