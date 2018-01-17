@@ -450,6 +450,9 @@
 		A6BB8C571FDEA22A0013619F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E72014791FCD784D0071BA7A /* BaseViewController */,
+				E720147A1FCD78680071BA7A /* StartViewController */,
+				A6D51F851F65652E00FA4851 /* MainViewController */,
 				E7FD7DFB1FC682800050EB06 /* Test */,
 				E72014781FCD783A0071BA7A /* Login */,
 				E7F1CC0D1FFDEF4B007E6810 /* Keyboard */,
@@ -590,9 +593,6 @@
 			children = (
 				A6D51F751F65614100FA4851 /* Cell */,
 				A6BB8C571FDEA22A0013619F /* Module */,
-				A6D51F851F65652E00FA4851 /* MainViewController */,
-				E720147A1FCD78680071BA7A /* StartViewController */,
-				E72014791FCD784D0071BA7A /* BaseViewController */,
 			);
 			name = MVVMC;
 			sourceTree = "<group>";

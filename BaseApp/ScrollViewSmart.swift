@@ -56,7 +56,7 @@ class UIScrollViewSmart: UIScrollView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
-            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+            cancelPerform()
         }
     }
     
@@ -68,8 +68,7 @@ class UIScrollViewSmart: UIScrollView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+        callPerform()
     }
 }
 
@@ -88,6 +87,16 @@ extension UIScrollViewSmart: UITextViewDelegate {
 }
 
  extension UIScrollViewSmart {
+    
+    fileprivate func cancelPerform() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+    }
+    
+    /// register Delegate
+    fileprivate func callPerform() { /// when call -> cancel
+        cancelPerform()
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
     
     fileprivate func hideKeyBoard() {
         keyboard_findFirstResponderBeneathView(self)?.resignFirstResponder()

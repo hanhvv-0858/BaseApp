@@ -22,6 +22,12 @@ class LoginViewController: UIViewController {
         guard let username = tfUserName.text, let password = tfPassWord.text else {
             return
         }
+        
+        if username.isEmpty && password.isEmpty {
+            logD("Khong duoc de username va pass trong")
+            return
+        }
+        
         let keyAccessToken = username + password
         UserDefaults.standard.set(keyAccessToken, forKey: KeyAccessToKen.key)
         dismiss()

@@ -62,7 +62,7 @@ class UITableViewSmart: UITableView {
     override func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
-            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+            cancelPerform()
         }
     }
     
@@ -73,12 +73,20 @@ class UITableViewSmart: UITableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+        callPerform()
     }
 }
 
 extension UITableViewSmart: UITextFieldDelegate {
+    
+    fileprivate func cancelPerform() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), object: self)
+    }
+    
+    fileprivate func callPerform() {
+        cancelPerform()
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(keyboard_assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if !focusNextTextField() {
@@ -114,7 +122,7 @@ extension UITableViewSmart {
     @objc fileprivate func scrollToActiveTextField() {
         return keyboard_scrollToActiveTextField()
     }
-
+    
     fileprivate func removeObserver() {
         NotificationCenter.default.removeObserver(self)
     }

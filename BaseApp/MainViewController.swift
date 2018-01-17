@@ -30,8 +30,6 @@ class MainViewController: BaseViewController {
         } else {
             gotoLogin() /// if khong co -> Login
         }
-        
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,10 +40,11 @@ class MainViewController: BaseViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: Override
+    // MARK: - Override
     
+    // MARK: - IBAction
     @IBAction func btnLogOut(_ sender: Any) {
-        /// remote Data
+        /// remove Data
         /// load LoginView
         UserDefaults.standard.removeObject(forKey: KeyAccessToKen.key)
         gotoLogin()
@@ -74,7 +73,7 @@ extension MainViewController {
     }
     
     fileprivate func registerCell() {
-        tableView.registerCellByNib(MainTableViewCell.self)
+        tableView.registerCellByNib(MainTableViewCell.type)
     }
     
     fileprivate func removeData() {
@@ -118,7 +117,7 @@ extension MainViewController: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(MainTableViewCell.self, forIndexPath: indexPath)
+        let cell = tableView.dequeueCell(MainTableViewCell.type, forIndexPath: indexPath)
             cell.configUI(viewControllers[indexPath.row].name)
             return cell
     }
