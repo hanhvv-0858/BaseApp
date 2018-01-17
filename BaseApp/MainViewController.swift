@@ -20,9 +20,17 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         registerCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         appendData()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -45,6 +53,11 @@ extension MainViewController {
     
     fileprivate func registerCell() {
         tableView.registerCellByNib(MainTableViewCell.self)
+    }
+    
+    fileprivate func removeData() {
+        viewControllers.removeAll()
+        tableView.reloadData()
     }
     
     fileprivate func appendData() {

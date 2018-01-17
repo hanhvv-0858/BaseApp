@@ -252,7 +252,13 @@ extension UIScrollView {
     }
     
     func keyboardState() -> KeyboardState {
-        return state != nil ? state! : KeyboardState()
+        if let state = objc_getAssociatedObject(self, &AssociatedKeysKeyboard.key) as? KeyboardState {
+            return state
+        } else {
+            let state = KeyboardState()
+            self.state = state
+            return state
+        }
     }
 }
 class KeyboardState {

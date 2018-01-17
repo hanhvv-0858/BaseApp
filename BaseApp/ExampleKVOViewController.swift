@@ -17,12 +17,12 @@ class ExampleKVOViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        addObserver(self, forKeyPath: #keyPath(viewModelKVO.model.updateAt), options: [.old,.new, .initial], context: nil)
+        //addObserver(self, forKeyPath: #keyPath(viewModelKVO.model.updateAt), options: [.old,.new, .initial], context: nil)
         
     }
     
     deinit {
-        removeObserver(self, forKeyPath: #keyPath(viewModelKVO.model.updateAt))
+        //removeObserver(self, forKeyPath: #keyPath(viewModelKVO.model.updateAt))
     }
     
     @IBAction fileprivate func updateTime(_ sender: AnyObject) {
