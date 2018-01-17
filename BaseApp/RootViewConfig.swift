@@ -15,8 +15,8 @@ class RootViewConfig {
     }
     
     func config( window: UIWindow?) {
-        let startVC = StartViewController.fromStoryboard(StoryboardName.Main)
-        window?.rootViewController = startVC
+        let vc = MainNavigationController.fromStoryboard(StoryboardName.MainApp)
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 }

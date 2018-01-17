@@ -38,7 +38,13 @@
                             <constraint firstItem="MFJ-vs-5xw" firstAttribute="leading" secondItem="abg-sh-dYe" secondAttribute="leading" id="g0k-Gq-3c7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="u3H-zO-iAt"/>
+                    <navigationItem key="navigationItem" id="u3H-zO-iAt">
+                        <barButtonItem key="rightBarButtonItem" title="LogOut" id="EYd-sR-R7p">
+                            <connections>
+                                <action selector="btnLogOut:" destination="zrL-SZ-LUx" id="oqI-al-FJ7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="MFJ-vs-5xw" id="5hl-fS-uq1"/>
                     </connections>

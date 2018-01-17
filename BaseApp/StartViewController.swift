@@ -26,7 +26,7 @@ final class StartViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.checkApp()
+        checkApp()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

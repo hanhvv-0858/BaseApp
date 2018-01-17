@@ -24,12 +24,19 @@ class MainViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        appendData()
+        
+        if checkUser() { /// if co user call API...
+            appendData()
+        } else {
+            gotoLogin() /// if khong co -> Login
+        }
+        
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        removeData()
+        removeData() /// remove de khong giu tham chieu toi View.
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,14 +44,29 @@ class MainViewController: BaseViewController {
     
     // MARK: Override
     
+    @IBAction func btnLogOut(_ sender: Any) {
+        /// remote Data
+        /// load LoginView
+        UserDefaults.standard.removeObject(forKey: KeyAccessToKen.key)
+        gotoLogin()
+    }
 }
 
 
 // MARK: - UI Private Methods Extensions
 extension MainViewController {
     
+    fileprivate func checkUser() -> Bool {
+        return UserDefaults.standard.value(forKey: KeyAccessToKen.key) == nil ? false : true
+    }
+    
     fileprivate func setupUI() {
         self.navigationItem.title = setupAppVersion()
+    }
+    
+    fileprivate func gotoLogin() {
+        let loginVC = LoginViewController.fromStoryboard(StoryboardName.LoginRegister)
+        self.present(loginVC)
     }
     
     fileprivate func setupAppVersion() -> String {
