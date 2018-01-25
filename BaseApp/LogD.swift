@@ -18,7 +18,7 @@ public func logD(_ object: Any? = nil, functionName: String = #function, fileNam
     #endif
 }
 
-public func logDJSON(_ object: AnyObject, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
+public func logDJSON(_ object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
     #if !NDEBUG
         let className = (fileName as NSString).lastPathComponent
         let formatter = DateFormatter()
@@ -29,7 +29,7 @@ public func logDJSON(_ object: AnyObject, functionName: String = #function, file
     #endif
 }
 
-private func jsonString(value: AnyObject) -> String? {
+private func jsonString(value: Any) -> String? {
     let options = JSONSerialization.WritingOptions.prettyPrinted
     if JSONSerialization.isValidJSONObject(value) {
         do {

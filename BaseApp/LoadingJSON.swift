@@ -10,14 +10,22 @@ import Foundation
 import SwiftyJSON
 
 func loadJSON(forResource: String, ofType: String, _ completionHandler: @escaping(JSON) -> Void) {
-    if let file = Bundle.main.path(forResource: forResource, ofType: ofType) {
+    if let path = Bundle.main.path(forResource: forResource, ofType: ofType) {
         do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: file))
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
             let json = JSON(data)
             completionHandler(json)
             
         } catch {
             logD(nil)
+        }
+    }
+}
+
+func loadFilePlist(forResource: String, ofType: String, _ completionHandler: @escaping(NSDictionary) -> Void) {
+    if let path = Bundle.main.path(forResource: forResource, ofType: ofType) {
+        if let dict = NSDictionary(contentsOfFile: path) {
+            completionHandler(dict)
         }
     }
 }

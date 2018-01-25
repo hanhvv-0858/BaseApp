@@ -92,6 +92,7 @@ extension MainViewController {
         viewControllers.append(KeyboardSmart.fromNib())
         viewControllers.append(ScrollKeyboardVViewController.fromNib())
         viewControllers.append(AnimatgionSegueViewController.fromNib())
+        viewControllers.append(LoadFileViewController.fromNib())
         tableView.reloadData()
     }
     

@@ -104,6 +104,9 @@
 		E7720B522019B516005E95ED /* AnimatgionSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B502019B516005E95ED /* AnimatgionSegueViewController.swift */; };
 		E7720B532019B516005E95ED /* AnimatgionSegueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7720B512019B516005E95ED /* AnimatgionSegueViewController.xib */; };
 		E7720B562019B5D3005E95ED /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B552019B5D3005E95ED /* AnimationTestViewController.swift */; };
+		E7720B5B2019D920005E95ED /* LoadFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B592019D920005E95ED /* LoadFileViewController.swift */; };
+		E7720B5C2019D920005E95ED /* LoadFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7720B5A2019D920005E95ED /* LoadFileViewController.xib */; };
+		E7720B5E2019DD04005E95ED /* ListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7720B5D2019DD04005E95ED /* ListData.plist */; };
 		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
@@ -272,6 +275,9 @@
 		E7720B502019B516005E95ED /* AnimatgionSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatgionSegueViewController.swift; sourceTree = "<group>"; };
 		E7720B512019B516005E95ED /* AnimatgionSegueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatgionSegueViewController.xib; sourceTree = "<group>"; };
 		E7720B552019B5D3005E95ED /* AnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestViewController.swift; sourceTree = "<group>"; };
+		E7720B592019D920005E95ED /* LoadFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFileViewController.swift; sourceTree = "<group>"; };
+		E7720B5A2019D920005E95ED /* LoadFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadFileViewController.xib; sourceTree = "<group>"; };
+		E7720B5D2019DD04005E95ED /* ListData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ListData.plist; sourceTree = "<group>"; };
 		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +482,8 @@
 				A6D75D8A1FEDED2C0091E6D4 /* Chatwork */,
 				A6D75D891FEDED200091E6D4 /* ExampleGesture */,
 				E7720B542019B5C0005E95ED /* AnimatgionSegueViewController */,
+				E7720B592019D920005E95ED /* LoadFileViewController.swift */,
+				E7720B5A2019D920005E95ED /* LoadFileViewController.xib */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -551,6 +559,7 @@
 				A6D51F831F6564EA00FA4851 /* RootViewConfig.swift */,
 				A6D51F901F65680D00FA4851 /* ReadNetworking.swift */,
 				A6D51FA51F656FF500FA4851 /* ConfigApp.swift */,
+				E7720B5D2019DD04005E95ED /* ListData.plist */,
 			);
 			name = AppConfig;
 			sourceTree = "<group>";
@@ -1012,6 +1021,7 @@
 				A6B304DD1FE65D2B00053CA4 /* ImageTableViewCell.xib in Resources */,
 				A6D51FE11F65810800FA4851 /* GoogleService-Info.plist in Resources */,
 				A6B304D81FE65D1200053CA4 /* TextTableViewCell.xib in Resources */,
+				E7720B5E2019DD04005E95ED /* ListData.plist in Resources */,
 				A67B49CF1FDFEB3C00F81588 /* ExampleTargetClosureViewController.xib in Resources */,
 				E745C9FB1FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib in Resources */,
 				A6D51F9D1F656C2600FA4851 /* LoginRegister.storyboard in Resources */,
@@ -1024,6 +1034,7 @@
 				A6D51F441F655DA500FA4851 /* Main.storyboard in Resources */,
 				E7FD7E0F1FC68A050050EB06 /* UserTableViewCell.xib in Resources */,
 				A6BB8C5B1FDEA26E0013619F /* ExampleAlertViewController.xib in Resources */,
+				E7720B5C2019D920005E95ED /* LoadFileViewController.xib in Resources */,
 				A6B304D11FE62ED700053CA4 /* MultiCellViewController.xib in Resources */,
 				A62213CB1FDEC60400622E00 /* Launch Screen.storyboard in Resources */,
 				A6D51F9F1F656C7500FA4851 /* MainApp.storyboard in Resources */,
@@ -1301,6 +1312,7 @@
 				E7FD7DEC1FC679E70050EB06 /* Extension+UIViewController.swift in Sources */,
 				A6D51F471F655DA500FA4851 /* BaseApp.xcdatamodeld in Sources */,
 				A6BB8C5C1FDEA26E0013619F /* ExampleAlertViewController.swift in Sources */,
+				E7720B5B2019D920005E95ED /* LoadFileViewController.swift in Sources */,
 				A6B304D91FE65D1200053CA4 /* TextTableViewCell.swift in Sources */,
 				A6778BE01FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift in Sources */,
 				A6D51FD61F65792D00FA4851 /* UILabelX.swift in Sources */,
