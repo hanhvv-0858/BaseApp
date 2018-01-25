@@ -101,6 +101,9 @@
 		E745CA011FF4D73700DC5496 /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745CA001FF4D73700DC5496 /* Swipe.swift */; };
 		E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */; };
 		E7720B4F20198440005E95ED /* Extension+UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */; };
+		E7720B522019B516005E95ED /* AnimatgionSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B502019B516005E95ED /* AnimatgionSegueViewController.swift */; };
+		E7720B532019B516005E95ED /* AnimatgionSegueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7720B512019B516005E95ED /* AnimatgionSegueViewController.xib */; };
+		E7720B562019B5D3005E95ED /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B552019B5D3005E95ED /* AnimationTestViewController.swift */; };
 		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
@@ -266,6 +269,9 @@
 		E745CA001FF4D73700DC5496 /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseName.swift; sourceTree = "<group>"; };
 		E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIStoryboard.swift"; sourceTree = "<group>"; };
+		E7720B502019B516005E95ED /* AnimatgionSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatgionSegueViewController.swift; sourceTree = "<group>"; };
+		E7720B512019B516005E95ED /* AnimatgionSegueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatgionSegueViewController.xib; sourceTree = "<group>"; };
+		E7720B552019B5D3005E95ED /* AnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestViewController.swift; sourceTree = "<group>"; };
 		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
@@ -469,6 +475,7 @@
 				A6BB8C581FDEA2360013619F /* ExampleAlert */,
 				A6D75D8A1FEDED2C0091E6D4 /* Chatwork */,
 				A6D75D891FEDED200091E6D4 /* ExampleGesture */,
+				E7720B542019B5C0005E95ED /* AnimatgionSegueViewController */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -508,10 +515,9 @@
 			isa = PBXGroup;
 			children = (
 				E7FD7DF51FC67CB60050EB06 /* CoreApp */,
-				A6D51F761F65614A00FA4851 /* Systems */,
 				A6D51F741F65613000FA4851 /* MVVMC */,
 				A6D51F731F65612600FA4851 /* File */,
-				A6D51F6F1F65604E00FA4851 /* AppConfiguration */,
+				A6D51F6F1F65604E00FA4851 /* AppConfig */,
 				A6D51F701F65605B00FA4851 /* Storyboard */,
 				A6D51F711F65606300FA4851 /* StoreData */,
 			);
@@ -536,7 +542,7 @@
 			path = BaseAppUITests;
 			sourceTree = "<group>";
 		};
-		A6D51F6F1F65604E00FA4851 /* AppConfiguration */ = {
+		A6D51F6F1F65604E00FA4851 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51F3E1F655DA500FA4851 /* AppDelegate.swift */,
@@ -546,7 +552,7 @@
 				A6D51F901F65680D00FA4851 /* ReadNetworking.swift */,
 				A6D51FA51F656FF500FA4851 /* ConfigApp.swift */,
 			);
-			name = AppConfiguration;
+			name = AppConfig;
 			sourceTree = "<group>";
 		};
 		A6D51F701F65605B00FA4851 /* Storyboard */ = {
@@ -631,6 +637,7 @@
 		A6D51F8A1F65664000FA4851 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A6D51F761F65614A00FA4851 /* Systems */,
 				E7FD7DF91FC680520050EB06 /* UKit */,
 				E7FD7DF61FC680110050EB06 /* MapKit */,
 				E7FD7DFA1FC680660050EB06 /* Foudation */,
@@ -734,6 +741,16 @@
 				E745C9F91FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib */,
 			);
 			name = SwipeAnyWhere;
+			sourceTree = "<group>";
+		};
+		E7720B542019B5C0005E95ED /* AnimatgionSegueViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7720B502019B516005E95ED /* AnimatgionSegueViewController.swift */,
+				E7720B512019B516005E95ED /* AnimatgionSegueViewController.xib */,
+				E7720B552019B5D3005E95ED /* AnimationTestViewController.swift */,
+			);
+			name = AnimatgionSegueViewController;
 			sourceTree = "<group>";
 		};
 		E78856C81FFC666C00420F90 /* OpenOfice */ = {
@@ -998,6 +1015,7 @@
 				A67B49CF1FDFEB3C00F81588 /* ExampleTargetClosureViewController.xib in Resources */,
 				E745C9FB1FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib in Resources */,
 				A6D51F9D1F656C2600FA4851 /* LoginRegister.storyboard in Resources */,
+				E7720B532019B516005E95ED /* AnimatgionSegueViewController.xib in Resources */,
 				A67B49D41FDFEE8300F81588 /* ExampleKVOViewController.xib in Resources */,
 				E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */,
 				E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */,
@@ -1268,6 +1286,7 @@
 				A67B49D51FDFEE8300F81588 /* ExampleKVOViewController.swift in Sources */,
 				A6D51FCA1F65792000FA4851 /* UIImageViewX.swift in Sources */,
 				A6778BF61FDEF8B800DD9BC8 /* RegisterViewController.swift in Sources */,
+				E7720B522019B516005E95ED /* AnimatgionSegueViewController.swift in Sources */,
 				E7FD7E1C1FC6E3830050EB06 /* RealmManager.swift in Sources */,
 				A6B304DE1FE65D2B00053CA4 /* ImageTableViewCell.swift in Sources */,
 				A6D51F781F65619000FA4851 /* LogD.swift in Sources */,
@@ -1304,6 +1323,7 @@
 				A6B304CE1FE62DCB00053CA4 /* CellsManager.swift in Sources */,
 				A6D51F3F1F655DA500FA4851 /* AppDelegate.swift in Sources */,
 				A6D51FC91F65792000FA4851 /* UIViewX.swift in Sources */,
+				E7720B562019B5D3005E95ED /* AnimationTestViewController.swift in Sources */,
 				A6D51FC71F65792000FA4851 /* UIViewControllerX.swift in Sources */,
 				A6D51FA61F656FF500FA4851 /* ConfigApp.swift in Sources */,
 				A6B304D21FE62ED700053CA4 /* MultiCellViewController.swift in Sources */,

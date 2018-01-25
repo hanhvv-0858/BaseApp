@@ -53,6 +53,87 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="9.4452773613193415"/>
         </scene>
+        <!--Animation Test View Controller-->
+        <scene sceneID="Myz-pP-IVj">
+            <objects>
+                <viewController storyboardIdentifier="AnimationTestViewController" id="wRn-dj-uNm" customClass="AnimationTestViewController" customModule="BaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DpW-lD-hhD"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3r-eC-bGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qyw-8w-W3B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-CM-lhu">
+                                <rect key="frame" x="153" y="128" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Fq5-6f-Exx" kind="push" customClass="NewClass" customModule="BaseApp" customModuleProvider="target" id="MIb-2R-Hnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvV-8u-8bF">
+                                <rect key="frame" x="153" y="177" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Fq5-6f-Exx" kind="push" customClass="ProceedToAppStoryboardSegue" customModule="BaseApp" customModuleProvider="target" id="sRW-n2-rf0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbm-pX-Zmd">
+                                <rect key="frame" x="153" y="228" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Fq5-6f-Exx" kind="push" customClass="ScaleSegue" customModule="BaseApp" customModuleProvider="target" id="kYd-xd-QsO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Un-mV-a9S">
+                                <rect key="frame" x="153" y="280" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Fq5-6f-Exx" kind="push" customClass="UnwindScaleSegue" customModule="BaseApp" customModuleProvider="target" id="kPu-nG-iVN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpO-Bt-OLI">
+                                <rect key="frame" x="153" y="329" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZy-cG-5Ta">
+                                <rect key="frame" x="153" y="380" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxz-KI-cIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="12"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RGB-bs-Zyy">
+            <objects>
+                <viewController id="Fq5-6f-Exx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ZZ-Uo-7c0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FFc-en-pLf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5cp-I7-SK2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vdx-rh-Kko"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKn-SN-Vn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="11"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kb9-HA-dZK">
             <objects>
@@ -78,4 +159,7 @@
             <point key="canvasLocation" x="-106" y="9"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kPu-nG-iVN"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -91,6 +91,7 @@ extension MainViewController {
         viewControllers.append(OpenOfficeViewController.fromNib())
         viewControllers.append(KeyboardSmart.fromNib())
         viewControllers.append(ScrollKeyboardVViewController.fromNib())
+        viewControllers.append(AnimatgionSegueViewController.fromNib())
         tableView.reloadData()
     }
     
