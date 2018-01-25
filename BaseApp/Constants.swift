@@ -8,12 +8,6 @@
 
 import Foundation
 
-public struct StoryboardName {
-    static let Main = "Main"
-    static let MainApp = "Main+App"
-    static let LoginRegister = "Login+Register"
-}
-
 struct  KeyAccessToKen {
     static let key = "access_token"
 }

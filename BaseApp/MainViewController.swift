@@ -64,7 +64,7 @@ extension MainViewController {
     }
     
     fileprivate func gotoLogin() {
-        let loginVC = LoginViewController.fromStoryboard(StoryboardName.LoginRegister)
+        let loginVC = LoginViewController.fromStoryboard(.loginRegister)
         self.present(loginVC)
     }
     

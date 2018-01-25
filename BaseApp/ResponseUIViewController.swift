@@ -17,12 +17,12 @@ extension ResponseUIViewController where Self: UIViewController {
         return self.init(nibName: String(describing: self), bundle: nil)
     }
     
-    static func fromStoryboard(_ storyboardName: String, withIdentifier: String? = nil) -> Self {
+    static func fromStoryboard(_ storyboardName: UIStoryboard.StoryboardName, withIdentifier: String? = nil) -> Self {
         return Self.fromStoryboard(self, storyboardName: storyboardName, withIdentifier: withIdentifier)
     }
     
-    fileprivate static func fromStoryboard<T: UIViewController>(_ type: T.Type, storyboardName: String, withIdentifier: String?) -> T {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+    fileprivate static func fromStoryboard<T: UIViewController>(_ type: T.Type, storyboardName: UIStoryboard.StoryboardName, withIdentifier: String?) -> T {
+        let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: nil)
         let identifier = withIdentifier == nil ? type.name : withIdentifier!
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
     }

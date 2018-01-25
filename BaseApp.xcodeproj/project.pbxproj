@@ -58,8 +58,8 @@
 		A6D51F971F65695800FA4851 /* Popable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51F951F65695800FA4851 /* Popable.swift */; };
 		A6D51F991F6569B200FA4851 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51F981F6569B200FA4851 /* MainViewController.swift */; };
 		A6D51F9B1F656A6000FA4851 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51F9A1F656A6000FA4851 /* LoginViewController.swift */; };
-		A6D51F9D1F656C2600FA4851 /* Login+Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D51F9C1F656C2600FA4851 /* Login+Register.storyboard */; };
-		A6D51F9F1F656C7500FA4851 /* Main+App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D51F9E1F656C7500FA4851 /* Main+App.storyboard */; };
+		A6D51F9D1F656C2600FA4851 /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D51F9C1F656C2600FA4851 /* LoginRegister.storyboard */; };
+		A6D51F9F1F656C7500FA4851 /* MainApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D51F9E1F656C7500FA4851 /* MainApp.storyboard */; };
 		A6D51FA11F656F5B00FA4851 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51FA01F656F5B00FA4851 /* CoreDataManager.swift */; };
 		A6D51FA41F656FA700FA4851 /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51FA31F656FA700FA4851 /* DispatchQueueHelper.swift */; };
 		A6D51FA61F656FF500FA4851 /* ConfigApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51FA51F656FF500FA4851 /* ConfigApp.swift */; };
@@ -100,6 +100,7 @@
 		E745C9FF1FF4D71300DC5496 /* SwipeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */; };
 		E745CA011FF4D73700DC5496 /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745CA001FF4D73700DC5496 /* Swipe.swift */; };
 		E7582E4F1FF113CA009A5BD4 /* ResponseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */; };
+		E7720B4F20198440005E95ED /* Extension+UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */; };
 		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
@@ -221,8 +222,8 @@
 		A6D51F951F65695800FA4851 /* Popable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popable.swift; sourceTree = "<group>"; };
 		A6D51F981F6569B200FA4851 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A6D51F9A1F656A6000FA4851 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A6D51F9C1F656C2600FA4851 /* Login+Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Login+Register.storyboard"; sourceTree = "<group>"; };
-		A6D51F9E1F656C7500FA4851 /* Main+App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main+App.storyboard"; sourceTree = "<group>"; };
+		A6D51F9C1F656C2600FA4851 /* LoginRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
+		A6D51F9E1F656C7500FA4851 /* MainApp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainApp.storyboard; sourceTree = "<group>"; };
 		A6D51FA01F656F5B00FA4851 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A6D51FA31F656FA700FA4851 /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
 		A6D51FA51F656FF500FA4851 /* ConfigApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigApp.swift; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 		E745C9FE1FF4D71300DC5496 /* SwipeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimation.swift; sourceTree = "<group>"; };
 		E745CA001FF4D73700DC5496 /* Swipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
 		E7582E4E1FF113CA009A5BD4 /* ResponseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseName.swift; sourceTree = "<group>"; };
+		E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIStoryboard.swift"; sourceTree = "<group>"; };
 		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
@@ -551,8 +553,8 @@
 			isa = PBXGroup;
 			children = (
 				A6D51F421F655DA500FA4851 /* Main.storyboard */,
-				A6D51F9E1F656C7500FA4851 /* Main+App.storyboard */,
-				A6D51F9C1F656C2600FA4851 /* Login+Register.storyboard */,
+				A6D51F9E1F656C7500FA4851 /* MainApp.storyboard */,
+				A6D51F9C1F656C2600FA4851 /* LoginRegister.storyboard */,
 				A62213CA1FDEC60400622E00 /* Launch Screen.storyboard */,
 			);
 			name = Storyboard;
@@ -804,6 +806,7 @@
 				E70BB6C91FC7ED5700E77A52 /* Extension+UIColor.swift */,
 				E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */,
 				E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */,
+				E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */,
 			);
 			name = UKit;
 			sourceTree = "<group>";
@@ -994,7 +997,7 @@
 				A6B304D81FE65D1200053CA4 /* TextTableViewCell.xib in Resources */,
 				A67B49CF1FDFEB3C00F81588 /* ExampleTargetClosureViewController.xib in Resources */,
 				E745C9FB1FF4D6D100DC5496 /* SwipeAnyWhereViewController.xib in Resources */,
-				A6D51F9D1F656C2600FA4851 /* Login+Register.storyboard in Resources */,
+				A6D51F9D1F656C2600FA4851 /* LoginRegister.storyboard in Resources */,
 				A67B49D41FDFEE8300F81588 /* ExampleKVOViewController.xib in Resources */,
 				E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */,
 				E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */,
@@ -1005,7 +1008,7 @@
 				A6BB8C5B1FDEA26E0013619F /* ExampleAlertViewController.xib in Resources */,
 				A6B304D11FE62ED700053CA4 /* MultiCellViewController.xib in Resources */,
 				A62213CB1FDEC60400622E00 /* Launch Screen.storyboard in Resources */,
-				A6D51F9F1F656C7500FA4851 /* Main+App.storyboard in Resources */,
+				A6D51F9F1F656C7500FA4851 /* MainApp.storyboard in Resources */,
 				A6778BEF1FDEF37500DD9BC8 /* Button.strings in Resources */,
 				E7F1CC191FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib in Resources */,
 			);
@@ -1296,6 +1299,7 @@
 				A6778BDB1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift in Sources */,
 				A6D51FDA1F65793600FA4851 /* PulseAnimation.swift in Sources */,
 				E7FD7E111FC68F3F0050EB06 /* AppInfo.swift in Sources */,
+				E7720B4F20198440005E95ED /* Extension+UIStoryboard.swift in Sources */,
 				E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */,
 				A6B304CE1FE62DCB00053CA4 /* CellsManager.swift in Sources */,
 				A6D51F3F1F655DA500FA4851 /* AppDelegate.swift in Sources */,
