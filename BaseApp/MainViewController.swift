@@ -47,6 +47,7 @@ class MainViewController: BaseViewController {
         /// remove Data
         /// load LoginView
         UserDefaults.standard.removeObject(forKey: KeyAccessToKen.key)
+        DatabaseGroup.shared.removeAllRealmData()
         gotoLogin()
     }
 }
@@ -93,6 +94,7 @@ extension MainViewController {
         viewControllers.append(ScrollKeyboardVViewController.fromNib())
         viewControllers.append(AnimatgionSegueViewController.fromNib())
         viewControllers.append(LoadFileViewController.fromNib())
+        viewControllers.append(RealmToDoViewController.fromNib())
         tableView.reloadData()
     }
     
