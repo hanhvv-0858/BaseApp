@@ -8,13 +8,405 @@
 
 import UIKit
 
+
+// MARK: - TableView
+class UITableViewSmart: UITableView {
+    
+    override var frame: CGRect {
+        willSet(newValue) {
+            if newValue.equalTo(frame) {
+                return
+            }
+            super.frame = frame
+        }
+        didSet {
+            if hasAutomaticKeyboardAvoidingBehaviour() {return}
+            updateContentInset()
+        }
+    }
+    
+    override var contentSize: CGSize {
+        willSet(newValue) {
+            if newValue.equalTo(contentSize) {
+                return
+            }
+            if hasAutomaticKeyboardAvoidingBehaviour() {
+                super.contentSize = newValue
+                return
+            }
+            super.contentSize = newValue
+        }
+        didSet {
+            updateContentInset()
+        }
+    }
+    
+    override init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style: style)
+        registerObserver()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        registerObserver()
+    }
+    
+    override func awakeFromNib() {
+        registerObserver()
+    }
+    
+    deinit {
+        removeObserver()
+    }
+    
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
+        if newSuperview != nil {
+            cancelPerform()
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyBoard()
+        super.touchesEnded(touches, with: event)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        callPerform()
+    }
+}
+
+extension UITableViewSmart: UITextFieldDelegate {
+    
+    fileprivate func cancelPerform() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), object: self)
+    }
+    
+    fileprivate func callPerform() {
+        cancelPerform()
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if !focusNextTextField() {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+extension UITableViewSmart: UITextViewDelegate {
+    
+}
+
+extension UITableViewSmart {
+    
+    fileprivate func hideKeyBoard() {
+        findFirstResponderBeneathView(self)?.resignFirstResponder()
+    }
+    
+    fileprivate func hasAutomaticKeyboardAvoidingBehaviour()->Bool {
+        if #available(iOS 8.3, *) {
+            if self.delegate is UITableViewController {
+                return true
+            }
+        }
+        return false
+    }
+    
+    fileprivate func focusNextTextField()->Bool {
+        return keyboard_focusNextTextField()
+    }
+    
+    fileprivate func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    fileprivate func registerObserver() {
+        if hasAutomaticKeyboardAvoidingBehaviour() { return }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextViewTextDidBeginEditing,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextFieldTextDidBeginEditing,
+                                               object: nil)
+    }
+}
+
+// MARK: - CollectionView
+class UICollectionViewSmart: UICollectionView {
+    
+    override var contentSize: CGSize {
+        willSet(newValue) {
+            if newValue.equalTo(contentSize) {
+                return
+            }
+            super.contentSize = newValue
+            updateContentInset()
+        }
+    }
+    
+    
+    override var frame: CGRect{
+        willSet(newValue) {
+            if newValue.equalTo(self.frame) {
+                return
+            }
+            super.frame = frame
+            updateContentInset()
+        }
+    }
+    
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        registerObserver()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        registerObserver()
+        
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        registerObserver()
+    }
+    
+    deinit {
+        removeObserver()
+    }
+    
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
+        if newSuperview != nil {
+            cancelPerform()
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyBoard()
+        super.touchesEnded(touches, with: event)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        callPerform()
+    }
+}
+
+extension UICollectionViewSmart: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if !focusNextTextField() {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+extension UICollectionViewSmart: UITextViewDelegate {
+    
+}
+
+extension UICollectionViewSmart {
+    
+    fileprivate func cancelPerform() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), object: self)
+    }
+    
+    fileprivate func callPerform() {
+        cancelPerform()
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
+    
+    fileprivate func hideKeyBoard() {
+        findFirstResponderBeneathView(self)?.resignFirstResponder()
+    }
+    
+    fileprivate func focusNextTextField() -> Bool {
+        return keyboard_focusNextTextField()
+    }
+    
+    fileprivate func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    fileprivate func registerObserver() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextViewTextDidBeginEditing,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextFieldTextDidBeginEditing,
+                                               object: nil)
+    }
+}
+
+// MARK: - ScrollView
+class UIScrollViewSmart: UIScrollView {
+    
+    // MARK: - Property
+    override var contentSize: CGSize {
+        willSet(newValue) {
+            if newValue.equalTo(contentSize) {
+                return
+            }
+            super.contentSize = newValue
+            updateFromContentSizeChange()
+        }
+    }
+    
+    override var frame: CGRect {
+        willSet(newValue) {
+            if newValue.equalTo(frame) {
+                return
+            }
+            super.frame = newValue
+            updateContentInset()
+        }
+    }
+    
+    // MARK: - LifeCycle
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        registerObserver()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        registerObserver()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        registerObserver()
+    }
+    
+    deinit {
+        removeObserver()
+    }
+    
+    // MARK: - Override
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
+        if newSuperview != nil {
+            cancelPerform()
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyBoard()
+        super.touchesEnded(touches, with: event)
+    }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        callPerform()
+    }
+}
+
+// MARK: - Extension
+extension UIScrollViewSmart: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if !focusNextTextField() {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+extension UIScrollViewSmart: UITextViewDelegate {
+    // TO DO
+}
+
+extension UIScrollViewSmart {
+    
+    fileprivate func cancelPerform() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), object: self)
+    }
+    
+    /// register Delegate
+    fileprivate func callPerform() { /// when call -> cancel
+        cancelPerform()
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(assignTextDelegateForViewsBeneathView(_:)), userInfo: nil, repeats: false)
+    }
+    
+    fileprivate func hideKeyBoard() {
+        findFirstResponderBeneathView(self)?.resignFirstResponder()
+    }
+    
+    fileprivate func contentSizeToFit() {
+        contentSize = calculatedContentSizeFromSubviewFrames()
+    }
+    
+    fileprivate func focusNextTextField() -> Bool {
+        return keyboard_focusNextTextField()
+    }
+    
+    fileprivate func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    fileprivate func registerObserver() {
+        /// UIKeyboardWillChangeFrame
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
+        
+        /// UIKeyboardWillHide
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+        
+        /// UITextViewTextDidBeginEditing
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextViewTextDidBeginEditing,
+                                               object: nil)
+        /// UITextFieldTextDidBeginEditing
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(scrollToActiveTextField),
+                                               name: NSNotification.Name.UITextFieldTextDidBeginEditing,
+                                               object: nil)
+    }
+}
+
 // MARK: - Process Event
 let kCalculatedContentPadding: CGFloat = 10
 let kMinimumScrollOffsetPadding: CGFloat = 20
 
 extension UIScrollView {
     
-    func keyboard_keyboardWillShow(_ notification:Notification) {
+    @objc fileprivate func keyboardWillShow(_ notification:Notification) {
         guard let userInfo = notification.userInfo else { return }
         guard let rectNotification = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
             return
@@ -26,7 +418,7 @@ extension UIScrollView {
         }
         
         let state = keyboardState()
-        guard let firstResponder = keyboard_findFirstResponderBeneathView(self) else { return}
+        guard let firstResponder = findFirstResponderBeneathView(self) else { return}
         state.keyboardRect = keyboardRect
         if !state.keyboardVisible {
             state.priorInset = contentInset
@@ -39,7 +431,7 @@ extension UIScrollView {
         if self is UIScrollViewSmart {
             state.priorContentSize = contentSize
             if contentSize.equalTo(CGSize.zero) {
-                contentSize = keyboard_calculatedContentSizeFromSubviewFrames()
+                contentSize = calculatedContentSizeFromSubviewFrames()
             }
         }
         let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Float ?? 0.0
@@ -49,9 +441,9 @@ extension UIScrollView {
             guard let strongSelf = self else {
                 return
             }
-            strongSelf.contentInset = strongSelf.keyboard_contentInsetForKeyboard()
+            strongSelf.contentInset = strongSelf.contentInsetForKeyboard()
             let viewableHeight = strongSelf.bounds.size.height - (strongSelf.contentInset.top + strongSelf.contentInset.bottom)
-            let point = CGPoint(x: strongSelf.contentOffset.x, y: strongSelf.keyboard_idealOffsetForView(firstResponder, viewAreaHeight: viewableHeight))
+            let point = CGPoint(x: strongSelf.contentOffset.x, y: strongSelf.idealOffsetForView(firstResponder, viewAreaHeight: viewableHeight))
             strongSelf.setContentOffset(point, animated: false)
             strongSelf.scrollIndicatorInsets = strongSelf.contentInset
             strongSelf.layoutIfNeeded()
@@ -59,7 +451,7 @@ extension UIScrollView {
         }
     }
     
-    func keyboard_keyboardWillHide(_ notification: Notification) {
+    @objc fileprivate func keyboardWillHide(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
         guard let rectNotification = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
             return
@@ -92,37 +484,37 @@ extension UIScrollView {
         }
     }
     
-    func keyboard_updateFromContentSizeChange() {
+    fileprivate func updateFromContentSizeChange() {
         let state = keyboardState()
         if state.keyboardVisible {
             state.priorContentSize = contentSize
         }
     }
     
-    func keyboard_focusNextTextField() -> Bool {
-        guard let firstResponder = keyboard_findFirstResponderBeneathView(self) else { return false}
-        guard let view = keyboard_findNextInputViewAfterView(firstResponder, beneathView: self) else { return false}
+    fileprivate func keyboard_focusNextTextField() -> Bool {
+        guard let firstResponder = findFirstResponderBeneathView(self) else { return false}
+        guard let view = findNextInputViewAfterView(firstResponder, beneathView: self) else { return false}
         Timer.scheduledTimer(timeInterval: 0.1, target: view, selector: #selector(becomeFirstResponder), userInfo: nil, repeats: false)
         return true
     }
     
-    func keyboard_scrollToActiveTextField() {
+    @objc fileprivate func scrollToActiveTextField() {
         let state = keyboardState()
         if !state.keyboardVisible { return }
         let visibleSpace = bounds.size.height - (contentInset.top + contentInset.bottom)
-        let y = keyboard_idealOffsetForView(keyboard_findFirstResponderBeneathView(self), viewAreaHeight: visibleSpace)
+        let y = idealOffsetForView(findFirstResponderBeneathView(self), viewAreaHeight: visibleSpace)
         let idealOffset = CGPoint(x: 0, y: y)
         DispatchQueue.main.asyncAfter(deadline: .now() + Double((Int64)(0 * NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {[weak self] () -> Void in
             self?.setContentOffset(idealOffset, animated: true)
         }
     }
     
-    func keyboard_findFirstResponderBeneathView(_ view:UIView) -> UIView? {
+    fileprivate func findFirstResponderBeneathView(_ view:UIView) -> UIView? {
         for childView in view.subviews {
             if childView.responds(to: #selector(getter: isFirstResponder)) && childView.isFirstResponder {
                 return childView
             }
-            let result = keyboard_findFirstResponderBeneathView(childView)
+            let result = findFirstResponderBeneathView(childView)
             if result != nil {
                 return result
             }
@@ -130,14 +522,14 @@ extension UIScrollView {
         return nil
     }
     
-    func keyboard_updateContentInset() {
+    fileprivate func updateContentInset() {
         let state = keyboardState()
         if state.keyboardVisible {
-            contentInset = keyboard_contentInsetForKeyboard()
+            contentInset = contentInsetForKeyboard()
         }
     }
     
-    func keyboard_calculatedContentSizeFromSubviewFrames() ->CGSize {
+    fileprivate func calculatedContentSizeFromSubviewFrames() ->CGSize {
         let wasShowingVerticalScrollIndicator = showsVerticalScrollIndicator
         let wasShowingHorizontalScrollIndicator = showsHorizontalScrollIndicator
         showsVerticalScrollIndicator = false
@@ -152,7 +544,7 @@ extension UIScrollView {
         return rect.size
     }
     
-    func keyboard_idealOffsetForView(_ view:UIView?,viewAreaHeight:CGFloat) -> CGFloat {
+    fileprivate func idealOffsetForView(_ view:UIView?,viewAreaHeight:CGFloat) -> CGFloat {
         let contentSize = self.contentSize
         var offset:CGFloat = 0.0
         let subviewRect =  view != nil ? view!.convert(view!.bounds, to: self) : CGRect.zero
@@ -171,7 +563,7 @@ extension UIScrollView {
         return offset
     }
     
-    func keyboard_contentInsetForKeyboard() -> UIEdgeInsets {
+    fileprivate func contentInsetForKeyboard() -> UIEdgeInsets {
         let state = keyboardState()
         var newInset = contentInset
         let keyboardRect = state.keyboardRect
@@ -180,7 +572,7 @@ extension UIScrollView {
         
     }
     
-    func keyboard_viewIsValidKeyViewCandidate(_ view: UIView)->Bool {
+    fileprivate func viewIsValidKeyViewCandidate(_ view: UIView)->Bool {
         if view.isHidden || !view.isUserInteractionEnabled {return false}
         if view is UITextField {
             if (view as! UITextField).isEnabled {return true}
@@ -192,14 +584,14 @@ extension UIScrollView {
         return false
     }
     
-    func keyboard_findNextInputViewAfterView(_ priorView:UIView,beneathView view:UIView, candidateView bestCandidate: inout UIView?) {
+    fileprivate func findNextInputViewAfterView(_ priorView:UIView,beneathView view:UIView, candidateView bestCandidate: inout UIView?) {
         let priorFrame = convert(priorView.frame, to: priorView.superview)
         let candidateFrame = bestCandidate == nil ? CGRect.zero : convert(bestCandidate!.frame, to: bestCandidate!.superview)
         
         var bestCandidateHeuristic = -sqrt(candidateFrame.origin.x*candidateFrame.origin.x + candidateFrame.origin.y*candidateFrame.origin.y) + ( Float(fabs(candidateFrame.minY - priorFrame.minY)) < .ulpOfOne ? 1e6 : 0)
         
         for childView in view.subviews {
-            if keyboard_viewIsValidKeyViewCandidate(childView) {
+            if viewIsValidKeyViewCandidate(childView) {
                 let frame = convert(childView.frame, to: view)
                 let heuristic = -sqrt(frame.origin.x*frame.origin.x + frame.origin.y*frame.origin.y)
                     + (Float(fabs(frame.minY - priorFrame.minY)) < .ulpOfOne ? 1e6 : 0)
@@ -212,24 +604,24 @@ extension UIScrollView {
                     bestCandidateHeuristic = heuristic
                 }
             } else {
-                keyboard_findNextInputViewAfterView(priorView, beneathView: view, candidateView: &bestCandidate)
+                findNextInputViewAfterView(priorView, beneathView: view, candidateView: &bestCandidate)
             }
         }
     }
     
-    func keyboard_findNextInputViewAfterView(_ priorView: UIView,beneathView view: UIView) ->UIView? {
+    fileprivate func findNextInputViewAfterView(_ priorView: UIView,beneathView view: UIView) ->UIView? {
         var candidate: UIView?
-        keyboard_findNextInputViewAfterView(priorView, beneathView: view, candidateView: &candidate)
+        findNextInputViewAfterView(priorView, beneathView: view, candidateView: &candidate)
         return candidate
     }
     
-    func keyboard_assignTextDelegateForViewsBeneathView(_ obj: AnyObject) {
+    @objc fileprivate func assignTextDelegateForViewsBeneathView(_ obj: AnyObject) {
         func processWithView(_ view: UIView) {
             for childView in view.subviews {
                 if childView is UITextField || childView is UITextView {
-                    keyboard_initializeView(childView)
+                    initializeView(childView)
                 } else {
-                    keyboard_assignTextDelegateForViewsBeneathView(childView)
+                    assignTextDelegateForViewsBeneathView(childView)
                 }
             }
         }
@@ -241,17 +633,17 @@ extension UIScrollView {
         }
     }
     
-    func keyboard_initializeView(_ view: UIView) {
+    fileprivate func initializeView(_ view: UIView) {
         if let textField = view as? UITextField,
             let delegate = self as? UITextFieldDelegate, textField.returnKeyType == UIReturnKeyType.default &&
             textField.delegate !== delegate {
             textField.delegate = delegate
-            let otherView = keyboard_findNextInputViewAfterView(view, beneathView: self)
+            let otherView = findNextInputViewAfterView(view, beneathView: self)
             textField.returnKeyType = otherView != nil ? .next : .done
         }
     }
     
-    func keyboardState() -> KeyboardState {
+    fileprivate func keyboardState() -> KeyboardState {
         if let state = objc_getAssociatedObject(self, &AssociatedKeysKeyboard.key) as? KeyboardState {
             return state
         } else {
@@ -261,7 +653,7 @@ extension UIScrollView {
         }
     }
 }
-class KeyboardState {
+fileprivate class KeyboardState {
     var priorInset = UIEdgeInsets.zero
     var priorScrollIndicatorInsets = UIEdgeInsets.zero
     var keyboardVisible = false
@@ -275,7 +667,7 @@ extension UIScrollView {
         static var key = "KeyBoardSmart"
     }
     
-    var state: KeyboardState? {
+    fileprivate var state: KeyboardState? {
         get { // get
             let optionalObject = objc_getAssociatedObject(self, &AssociatedKeysKeyboard.key) as AnyObject?
             if let object = optionalObject {

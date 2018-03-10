@@ -119,9 +119,6 @@
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
 		E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */; };
-		E7F1CC081FFDEA1B007E6810 /* TableViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */; };
-		E7F1CC0A1FFDEA80007E6810 /* CollectionViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */; };
-		E7F1CC0C1FFDEAF3007E6810 /* ScrollViewSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */; };
 		E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */; };
 		E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */; };
 		E7F1CC141FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC121FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift */; };
@@ -297,9 +294,6 @@
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
-		E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSmart.swift; sourceTree = "<group>"; };
-		E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSmart.swift; sourceTree = "<group>"; };
-		E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSmart.swift; sourceTree = "<group>"; };
 		E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmart.swift; sourceTree = "<group>"; };
 		E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardSmart.xib; sourceTree = "<group>"; };
 		E7F1CC121FFDEFE4007E6810 /* KeyboardSmartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmartTableViewCell.swift; sourceTree = "<group>"; };
@@ -510,9 +504,9 @@
 				E72014791FCD784D0071BA7A /* BaseViewController */,
 				E720147A1FCD78680071BA7A /* StartViewController */,
 				A6D51F851F65652E00FA4851 /* MainViewController */,
-				E7FD7DFB1FC682800050EB06 /* Test */,
-				E72014781FCD783A0071BA7A /* Login */,
-				E7F1CC0D1FFDEF4B007E6810 /* Keyboard */,
+				E7FD7DFB1FC682800050EB06 /* TestViewController */,
+				E72014781FCD783A0071BA7A /* LoginViewController */,
+				E7F1CC0D1FFDEF4B007E6810 /* KeyboardViewController */,
 				E78856C81FFC666C00420F90 /* OpenOfice */,
 				E745C9F71FF4D69A00DC5496 /* SwipeAnyWhere */,
 				A6B304CC1FE62D9000053CA4 /* ExampleMultiCellTableView */,
@@ -651,19 +645,9 @@
 		A6D51F741F65613000FA4851 /* MVVMC */ = {
 			isa = PBXGroup;
 			children = (
-				A6D51F751F65614100FA4851 /* Cell */,
 				A6BB8C571FDEA22A0013619F /* Module */,
 			);
 			name = MVVMC;
-			sourceTree = "<group>";
-		};
-		A6D51F751F65614100FA4851 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A6D51FA71F65725400FA4851 /* MainTableViewCell.swift */,
-				A6D51FA81F65725400FA4851 /* MainTableViewCell.xib */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 		A6D51F761F65614A00FA4851 /* Systems */ = {
@@ -681,6 +665,8 @@
 		A6D51F851F65652E00FA4851 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A6D51FA71F65725400FA4851 /* MainTableViewCell.swift */,
+				A6D51FA81F65725400FA4851 /* MainTableViewCell.xib */,
 				A6D51F981F6569B200FA4851 /* MainViewController.swift */,
 				A62213C81FDEC49A00622E00 /* MainNavigationController.swift */,
 			);
@@ -762,13 +748,13 @@
 			name = Chatwork;
 			sourceTree = "<group>";
 		};
-		E72014781FCD783A0071BA7A /* Login */ = {
+		E72014781FCD783A0071BA7A /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
 				A6D51F9A1F656A6000FA4851 /* LoginViewController.swift */,
 				A6778BF51FDEF8B800DD9BC8 /* RegisterViewController.swift */,
 			);
-			name = Login;
+			name = LoginViewController;
 			sourceTree = "<group>";
 		};
 		E72014791FCD784D0071BA7A /* BaseViewController */ = {
@@ -819,14 +805,11 @@
 			isa = PBXGroup;
 			children = (
 				E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */,
-				E7F1CC071FFDEA1B007E6810 /* TableViewSmart.swift */,
-				E7F1CC091FFDEA80007E6810 /* CollectionViewSmart.swift */,
-				E7F1CC0B1FFDEAF3007E6810 /* ScrollViewSmart.swift */,
 			);
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
-		E7F1CC0D1FFDEF4B007E6810 /* Keyboard */ = {
+		E7F1CC0D1FFDEF4B007E6810 /* KeyboardViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */,
@@ -836,7 +819,7 @@
 				E7F1CC161FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift */,
 				E7F1CC171FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib */,
 			);
-			name = Keyboard;
+			name = KeyboardViewController;
 			sourceTree = "<group>";
 		};
 		E7FD7DF51FC67CB60050EB06 /* CoreApp */ = {
@@ -891,7 +874,7 @@
 			name = Foudation;
 			sourceTree = "<group>";
 		};
-		E7FD7DFB1FC682800050EB06 /* Test */ = {
+		E7FD7DFB1FC682800050EB06 /* TestViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E7FD7DFC1FC682930050EB06 /* UsersModel.swift */,
@@ -902,7 +885,7 @@
 				E7FD7E0C1FC68A050050EB06 /* UserTableViewCell.swift */,
 				E7FD7E0D1FC68A050050EB06 /* UserTableViewCell.xib */,
 			);
-			name = Test;
+			name = TestViewController;
 			sourceTree = "<group>";
 		};
 		E7FD7DFE1FC682C60050EB06 /* ConfigLibrary */ = {
@@ -1306,7 +1289,6 @@
 				A6D51FA91F65725400FA4851 /* MainTableViewCell.swift in Sources */,
 				E7FD7DF81FC680320050EB06 /* Extension+MKMapView.swift in Sources */,
 				A654FAC120529F8000866E24 /* ToDoItem.swift in Sources */,
-				E7F1CC0A1FFDEA80007E6810 /* CollectionViewSmart.swift in Sources */,
 				E745C9FF1FF4D71300DC5496 /* SwipeAnimation.swift in Sources */,
 				A6D51F9B1F656A6000FA4851 /* LoginViewController.swift in Sources */,
 				E7FD7E151FC6996F0050EB06 /* Extension+UIPickerController.swift in Sources */,
@@ -1375,7 +1357,6 @@
 				A6D51FBB1F65791400FA4851 /* StatusBarX.swift in Sources */,
 				A6D51F871F65654D00FA4851 /* StartViewController.swift in Sources */,
 				A6D51F841F6564EA00FA4851 /* RootViewConfig.swift in Sources */,
-				E7F1CC0C1FFDEAF3007E6810 /* ScrollViewSmart.swift in Sources */,
 				A6D51F971F65695800FA4851 /* Popable.swift in Sources */,
 				A67B49D01FDFEB3C00F81588 /* ExampleTargetClosureViewController.swift in Sources */,
 				A6778BDB1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift in Sources */,
@@ -1393,7 +1374,6 @@
 				E745CA011FF4D73700DC5496 /* Swipe.swift in Sources */,
 				E7FD7DEE1FC679FE0050EB06 /* Extension+UITableViewX.swift in Sources */,
 				A6D51FC81F65792000FA4851 /* UIVisualEffectViewX.swift in Sources */,
-				E7F1CC081FFDEA1B007E6810 /* TableViewSmart.swift in Sources */,
 				E7FD7DFD1FC682930050EB06 /* UsersModel.swift in Sources */,
 				A6D75D881FEDED140091E6D4 /* ChatWorkViewController.swift in Sources */,
 				A6D51F821F65636700FA4851 /* OAthhandler.swift in Sources */,

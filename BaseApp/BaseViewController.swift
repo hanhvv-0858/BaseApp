@@ -16,10 +16,13 @@ class BaseViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUIWithBase()
+        registerObserverWithBase()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupUIWithBase()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +35,10 @@ class BaseViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    deinit {
+        removeObserverWithBase()
     }
     
     // MARK: - Override
@@ -59,19 +66,19 @@ extension BaseViewController {
 // MARK: - Methods Extension
 extension BaseViewController {
     
-    func updateUI() {
+    func updateUIWithBase() {
         
     }
     
-    func configuarationUI() {
+    func setupUIWithBase() {
         
     }
     
-    func registerObserver() {
+    func registerObserverWithBase() {
         
     }
     
-    func removeObserver() {
+    func removeObserverWithBase() {
         
     }
 }
