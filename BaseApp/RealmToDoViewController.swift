@@ -48,6 +48,18 @@ class RealmToDoViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addButtonAction))
+        
+        let delete = UIBarButtonItem(title: "DeleteOffline", style: .plain, target: self, action: #selector(deleteOfflineRealm))
+        let add = UIBarButtonItem(title: "AddOffline", style: .plain, target: self, action: #selector(addOfflineRealm))
+        navigationItem.setLeftBarButtonItems([delete, add], animated: false)
+    }
+    
+    @objc fileprivate func deleteOfflineRealm() {
+       DatabaseGroup.shared.removeOfflineRealm()
+    }
+    
+    @objc fileprivate func addOfflineRealm() {
+        DatabaseGroup.shared.addOfflineRealm()
     }
     
     @objc fileprivate func addButtonAction() {

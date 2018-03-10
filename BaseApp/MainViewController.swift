@@ -8,10 +8,15 @@
 
 import UIKit
 
+fileprivate class DataSourceCellMainViewController {
+    var name: String?
+    var viewControllers = [UIViewController]()
+}
+
 class MainViewController: BaseViewController {
     
     // MARK: - Properties
-    fileprivate var viewControllers = [UIViewController]()
+    fileprivate var dataSource = [DataSourceCellMainViewController]()
     // MARK: - @IBOutlet
     @IBOutlet weak fileprivate var tableView: UITableView!
     
@@ -78,23 +83,37 @@ extension MainViewController {
     }
     
     fileprivate func removeData() {
-        viewControllers.removeAll()
+        dataSource.removeAll()
         tableView.reloadData()
     }
     
     fileprivate func appendData() {
-        viewControllers.append(ExampleAlertViewController.fromNib())
-        viewControllers.append(ExampleOpenUIPickerController.fromNib())
-        viewControllers.append(ExampleHideKeyBoardTextFieldViewController.fromNib())
-        viewControllers.append(MultiLanguageViewController.fromNib())
-        viewControllers.append(ExampleTargetClosureViewController.fromNib())
-        viewControllers.append(ExampleKVOViewController.fromNib())
-        viewControllers.append(OpenOfficeViewController.fromNib())
-        viewControllers.append(KeyboardSmart.fromNib())
-        viewControllers.append(ScrollKeyboardVViewController.fromNib())
-        viewControllers.append(AnimatgionSegueViewController.fromNib())
-        viewControllers.append(LoadFileViewController.fromNib())
-        viewControllers.append(RealmToDoViewController.fromNib())
+        /// UIView
+        let views = DataSourceCellMainViewController()
+        views.name = "UIView"
+        views.viewControllers.append(ExampleAlertViewController.fromNib())
+        views.viewControllers.append(ExampleOpenUIPickerController.fromNib())
+        views.viewControllers.append(ExampleHideKeyBoardTextFieldViewController.fromNib())
+        views.viewControllers.append(MultiLanguageViewController.fromNib())
+        views.viewControllers.append(ExampleTargetClosureViewController.fromNib())
+        views.viewControllers.append(ExampleKVOViewController.fromNib())
+        views.viewControllers.append(OpenOfficeViewController.fromNib())
+        views.viewControllers.append(KeyboardSmart.fromNib())
+        views.viewControllers.append(ScrollKeyboardVViewController.fromNib())
+        views.viewControllers.append(AnimatgionSegueViewController.fromNib())
+        views.viewControllers.append(LoadFileViewController.fromNib())
+        /// GameSpriteKit
+        let games = DataSourceCellMainViewController()
+        games.name = "GameSpriteKit"
+        games.viewControllers.append(GameViewController.fromNib())
+        /// Database
+        let databases = DataSourceCellMainViewController()
+        databases.name = "Database"
+        databases.viewControllers.append(RealmToDoViewController.fromNib())
+        /// TO DO
+        self.dataSource.append(views)
+        self.dataSource.append(games)
+        self.dataSource.append(databases)
         tableView.reloadData()
     }
     
@@ -102,9 +121,9 @@ extension MainViewController {
 
 // MARK: - Delegate
 extension MainViewController: UITableViewDelegate {
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = viewControllers[indexPath.row]
+        let vc = dataSource[indexPath.section].viewControllers[indexPath.row]
         self.pushNavigationController(vc)
     }
     
@@ -116,13 +135,21 @@ extension MainViewController: UITableViewDelegate {
 
 extension MainViewController: UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dataSource[section].name
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewControllers.count
+        return dataSource[section].viewControllers.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(MainTableViewCell.type, forIndexPath: indexPath)
-            cell.configUI(viewControllers[indexPath.row].name)
+            cell.configUI(dataSource[indexPath.section].viewControllers[indexPath.row].name)
             return cell
     }
 }

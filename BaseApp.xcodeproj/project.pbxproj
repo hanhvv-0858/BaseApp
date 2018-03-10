@@ -33,6 +33,11 @@
 		A67B49D41FDFEE8300F81588 /* ExampleKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67B49D21FDFEE8300F81588 /* ExampleKVOViewController.xib */; };
 		A67B49D51FDFEE8300F81588 /* ExampleKVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B49D31FDFEE8300F81588 /* ExampleKVOViewController.swift */; };
 		A67B49D71FDFEEAC00F81588 /* ModelKVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67B49D61FDFEEAC00F81588 /* ModelKVO.swift */; };
+		A685D99B2053BC77008D710A /* SoundNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685D99A2053BC77008D710A /* SoundNames.swift */; };
+		A685D99D2053BC9B008D710A /* SpriteNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685D99C2053BC9B008D710A /* SpriteNames.swift */; };
+		A685D99F2053BCC8008D710A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685D99E2053BCC8008D710A /* Colors.swift */; };
+		A685D9A12053BCEA008D710A /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685D9A02053BCEA008D710A /* Math.swift */; };
+		A685D9A42053BD70008D710A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685D9A32053BD70008D710A /* GameViewController.swift */; };
 		A6B304CE1FE62DCB00053CA4 /* CellsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B304CD1FE62DCB00053CA4 /* CellsManager.swift */; };
 		A6B304D11FE62ED700053CA4 /* MultiCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B304CF1FE62ED700053CA4 /* MultiCellViewController.xib */; };
 		A6B304D21FE62ED700053CA4 /* MultiCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B304D01FE62ED700053CA4 /* MultiCellViewController.swift */; };
@@ -43,6 +48,8 @@
 		A6B304DE1FE65D2B00053CA4 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B304DC1FE65D2B00053CA4 /* ImageTableViewCell.swift */; };
 		A6BB8C5B1FDEA26E0013619F /* ExampleAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6BB8C591FDEA26E0013619F /* ExampleAlertViewController.xib */; };
 		A6BB8C5C1FDEA26E0013619F /* ExampleAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB8C5A1FDEA26E0013619F /* ExampleAlertViewController.swift */; };
+		A6D360B92053C111007075CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D360B82053C111007075CB /* GameScene.swift */; };
+		A6D360BB2053C193007075CB /* GameTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D360BA2053C193007075CB /* GameTextures.swift */; };
 		A6D51F3F1F655DA500FA4851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D51F3E1F655DA500FA4851 /* AppDelegate.swift */; };
 		A6D51F441F655DA500FA4851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D51F421F655DA500FA4851 /* Main.storyboard */; };
 		A6D51F471F655DA500FA4851 /* BaseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6D51F451F655DA500FA4851 /* BaseApp.xcdatamodeld */; };
@@ -201,6 +208,11 @@
 		A67B49D21FDFEE8300F81588 /* ExampleKVOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleKVOViewController.xib; sourceTree = "<group>"; };
 		A67B49D31FDFEE8300F81588 /* ExampleKVOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleKVOViewController.swift; sourceTree = "<group>"; };
 		A67B49D61FDFEEAC00F81588 /* ModelKVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelKVO.swift; sourceTree = "<group>"; };
+		A685D99A2053BC77008D710A /* SoundNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNames.swift; sourceTree = "<group>"; };
+		A685D99C2053BC9B008D710A /* SpriteNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteNames.swift; sourceTree = "<group>"; };
+		A685D99E2053BCC8008D710A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A685D9A02053BCEA008D710A /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		A685D9A32053BD70008D710A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A6B304CD1FE62DCB00053CA4 /* CellsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsManager.swift; sourceTree = "<group>"; };
 		A6B304CF1FE62ED700053CA4 /* MultiCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiCellViewController.xib; sourceTree = "<group>"; };
 		A6B304D01FE62ED700053CA4 /* MultiCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCellViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +223,8 @@
 		A6B304DC1FE65D2B00053CA4 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		A6BB8C591FDEA26E0013619F /* ExampleAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleAlertViewController.xib; sourceTree = "<group>"; };
 		A6BB8C5A1FDEA26E0013619F /* ExampleAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAlertViewController.swift; sourceTree = "<group>"; };
+		A6D360B82053C111007075CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A6D360BA2053C193007075CB /* GameTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTextures.swift; sourceTree = "<group>"; };
 		A6D51F3B1F655DA500FA4851 /* BaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D51F3E1F655DA500FA4851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6D51F431F655DA500FA4851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -450,6 +464,44 @@
 			name = ExampleKVO;
 			sourceTree = "<group>";
 		};
+		A685D9982053BBB7008D710A /* GameSpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				A685D9A52053BD7E008D710A /* Scenes */,
+				A685D9A22053BD57008D710A /* ViewController */,
+				A685D9992053BBD9008D710A /* Utilities */,
+				A6D360BC2053C1CB007075CB /* Singletions */,
+			);
+			name = GameSpriteKit;
+			sourceTree = "<group>";
+		};
+		A685D9992053BBD9008D710A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A685D99A2053BC77008D710A /* SoundNames.swift */,
+				A685D99C2053BC9B008D710A /* SpriteNames.swift */,
+				A685D99E2053BCC8008D710A /* Colors.swift */,
+				A685D9A02053BCEA008D710A /* Math.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A685D9A22053BD57008D710A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A685D9A32053BD70008D710A /* GameViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A685D9A52053BD7E008D710A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A6D360B82053C111007075CB /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		A6B256D02007779D00899073 /* SwipeAction */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +553,7 @@
 		A6BB8C571FDEA22A0013619F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A685D9982053BBB7008D710A /* GameSpriteKit */,
 				E72014791FCD784D0071BA7A /* BaseViewController */,
 				E720147A1FCD78680071BA7A /* StartViewController */,
 				A6D51F851F65652E00FA4851 /* MainViewController */,
@@ -532,6 +585,14 @@
 				A6BB8C5A1FDEA26E0013619F /* ExampleAlertViewController.swift */,
 			);
 			name = ExampleAlert;
+			sourceTree = "<group>";
+		};
+		A6D360BC2053C1CB007075CB /* Singletions */ = {
+			isa = PBXGroup;
+			children = (
+				A6D360BA2053C193007075CB /* GameTextures.swift */,
+			);
+			name = Singletions;
 			sourceTree = "<group>";
 		};
 		A6D51F321F655DA500FA4851 = {
@@ -1297,6 +1358,7 @@
 				A6D51FA41F656FA700FA4851 /* DispatchQueueHelper.swift in Sources */,
 				A6D51FCB1F65792000FA4851 /* UISliderX.swift in Sources */,
 				A6D51FCD1F65792000FA4851 /* UIViewAnchorPoint.swift in Sources */,
+				A685D9A12053BCEA008D710A /* Math.swift in Sources */,
 				A6D51F7C1F65629600FA4851 /* Constants.swift in Sources */,
 				A6D51FD71F65792D00FA4851 /* UIMenuItemX.swift in Sources */,
 				A6D51F911F65680D00FA4851 /* ReadNetworking.swift in Sources */,
@@ -1324,6 +1386,7 @@
 				A6D51FB91F65791400FA4851 /* NavigationBarX.swift in Sources */,
 				A6D75D8C1FEDED740091E6D4 /* LoginChatworkRouter.swift in Sources */,
 				A6778BE51FDEF2F300DD9BC8 /* MultiLanguageViewController.swift in Sources */,
+				A6D360BB2053C193007075CB /* GameTextures.swift in Sources */,
 				E7FD7E0E1FC68A050050EB06 /* UserTableViewCell.swift in Sources */,
 				E7FD7E001FC682F90050EB06 /* ConfigAlamofire.swift in Sources */,
 				A66773362052BB7900ECC4A5 /* DatabaseGroup.swift in Sources */,
@@ -1345,9 +1408,11 @@
 				E7FD7DEC1FC679E70050EB06 /* Extension+UIViewController.swift in Sources */,
 				A6D51F471F655DA500FA4851 /* BaseApp.xcdatamodeld in Sources */,
 				A6BB8C5C1FDEA26E0013619F /* ExampleAlertViewController.swift in Sources */,
+				A6D360B92053C111007075CB /* GameScene.swift in Sources */,
 				E7720B5B2019D920005E95ED /* LoadFileViewController.swift in Sources */,
 				A6B304D91FE65D1200053CA4 /* TextTableViewCell.swift in Sources */,
 				A6778BE01FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.swift in Sources */,
+				A685D9A42053BD70008D710A /* GameViewController.swift in Sources */,
 				A6D51FD61F65792D00FA4851 /* UILabelX.swift in Sources */,
 				A6D51FBA1F65791400FA4851 /* SearchBarX.swift in Sources */,
 				E7F1CC181FFDF3FE007E6810 /* ScrollKeyboardVViewController.swift in Sources */,
@@ -1359,6 +1424,7 @@
 				A6D51F841F6564EA00FA4851 /* RootViewConfig.swift in Sources */,
 				A6D51F971F65695800FA4851 /* Popable.swift in Sources */,
 				A67B49D01FDFEB3C00F81588 /* ExampleTargetClosureViewController.swift in Sources */,
+				A685D99D2053BC9B008D710A /* SpriteNames.swift in Sources */,
 				A6778BDB1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.swift in Sources */,
 				A6D51FDA1F65793600FA4851 /* PulseAnimation.swift in Sources */,
 				E7FD7E111FC68F3F0050EB06 /* AppInfo.swift in Sources */,
@@ -1384,8 +1450,10 @@
 				A6D51FD41F65792D00FA4851 /* UIButtonPulse.swift in Sources */,
 				E7FD7E021FC683BA0050EB06 /* ExtensionProtocol.swift in Sources */,
 				A6D51FCF1F65792000FA4851 /* UIProgreeBarX.swift in Sources */,
+				A685D99F2053BCC8008D710A /* Colors.swift in Sources */,
 				A654FAB920529B4200866E24 /* Block.swift in Sources */,
 				E7FD7E131FC6953C0050EB06 /* Pagination.swift in Sources */,
+				A685D99B2053BC77008D710A /* SoundNames.swift in Sources */,
 				A6D51F7E1F6562F100FA4851 /* ApiClients.swift in Sources */,
 				A61E0F821FE14E5F00BA2C55 /* ResponseModel.swift in Sources */,
 				A6D51F8C1F65665300FA4851 /* Extension+NSObject.swift in Sources */,

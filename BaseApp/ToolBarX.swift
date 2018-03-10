@@ -12,4 +12,28 @@ import UIKit
 open class ToolBarX: UIToolbar {
 
     
+    func createToolbar(titleLeft: String = "Cancel", titleRight: String = "Done"){
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .blackTranslucent
+        toolBar.isTranslucent = true
+        toolBar.backgroundColor = UIColor.blue
+        toolBar.tintColor = UIColor.white
+        toolBar.sizeToFit()
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: titleRight, style: .plain, target: self, action: #selector(ToolBarX.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: titleLeft, style: .plain, target: self, action: #selector(ToolBarX.cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+    }
+    
+    func doneClick() {
+        //do something here
+    }
+    
+    func cancelClick() {
+        //do something here
+    }
 }
