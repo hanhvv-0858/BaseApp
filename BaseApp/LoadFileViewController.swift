@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class LoadFileViewController: UIViewController {
+    
     @IBOutlet weak fileprivate var showVersion: UILabel!
     
     override func viewDidLoad() {
@@ -17,10 +18,12 @@ class LoadFileViewController: UIViewController {
         
         loadFilePlist(forResource: "ListData", ofType: "plist") { (json) in
             logDJSON(json)
+            self.showVersion.text = json["Hello"] as? String
+            
         }
         
-        loadJSON(forResource: "", ofType: "") { (json) in
-            logDJSON(json)
+        loadJSON(forResource: "ListData", ofType: "plist") { (json) in
+            logD(json)
         }
     }
 

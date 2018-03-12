@@ -11,20 +11,16 @@ import SwiftyJSON
 
 func loadJSON(forResource: String, ofType: String, _ completionHandler: @escaping(JSON) -> Void) {
     if let path = Bundle.main.path(forResource: forResource, ofType: ofType) {
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let json = JSON(data)
+        if let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {
+            let json = JSON(dict)
             completionHandler(json)
-            
-        } catch {
-            logD(nil)
         }
     }
 }
 
-func loadFilePlist(forResource: String, ofType: String, _ completionHandler: @escaping(NSDictionary) -> Void) {
+func loadFilePlist(forResource: String, ofType: String, _ completionHandler: @escaping([String: Any]) -> Void) {
     if let path = Bundle.main.path(forResource: forResource, ofType: ofType) {
-        if let dict = NSDictionary(contentsOfFile: path) {
+        if let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {
             completionHandler(dict)
         }
     }
