@@ -110,6 +110,7 @@ extension MainViewController {
         games.viewControllers.append(GameViewController.fromNib())
         /// Database
         let databases = DataSourceCellMainViewController("Database")
+        databases.viewControllers.append(CRUDViewController.fromNib())
         databases.viewControllers.append(RealmToDoViewController.fromNib())
         /// TO DO
         self.dataSource.append(views)

@@ -24,3 +24,8 @@ let kScreenCenterTop = CGPoint(x: kViewSize.width / 2, y: kViewSize.height * 0.7
 
 // MARK: - Device size convenience
 let kDeviceTablet = (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
+
+
+struct GlobalConfig {
+    static let dataVersion = 1
+}

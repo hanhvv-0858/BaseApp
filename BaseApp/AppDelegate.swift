@@ -71,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     fileprivate func configApp() {
         FirebaseApp.configure()
+        RealmManager.config()
         RootViewConfig.sharedInstance.config(window: self.window)
         ReadNetworking.sharedInstance.start(manager: manager)
     }

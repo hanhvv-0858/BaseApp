@@ -127,6 +127,8 @@
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
 		E7BC19CE20575E7300656159 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC19CD20575E7300656159 /* Localization.swift */; };
 		E7C3B81A205764F8005075FA /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7C3B819205764F8005075FA /* GameViewController.xib */; };
+		E7C3B81D20577D70005075FA /* CRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3B81B20577D70005075FA /* CRUDViewController.swift */; };
+		E7C3B81E20577D70005075FA /* CRUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7C3B81C20577D70005075FA /* CRUDViewController.xib */; };
 		E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */; };
 		E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */; };
 		E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */; };
@@ -311,6 +313,8 @@
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		E7BC19CD20575E7300656159 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		E7C3B819205764F8005075FA /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		E7C3B81B20577D70005075FA /* CRUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDViewController.swift; sourceTree = "<group>"; };
+		E7C3B81C20577D70005075FA /* CRUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CRUDViewController.xib; sourceTree = "<group>"; };
 		E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
 		E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmart.swift; sourceTree = "<group>"; };
 		E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardSmart.xib; sourceTree = "<group>"; };
@@ -410,6 +414,8 @@
 				A654FAC020529F8000866E24 /* ToDoItem.swift */,
 				A654FAC22052A90F00866E24 /* AddToDoViewController.swift */,
 				A654FAC32052A90F00866E24 /* AddToDoViewController.xib */,
+				E7C3B81B20577D70005075FA /* CRUDViewController.swift */,
+				E7C3B81C20577D70005075FA /* CRUDViewController.xib */,
 			);
 			name = RealmToDoViewController;
 			sourceTree = "<group>";
@@ -1144,6 +1150,7 @@
 				A62213CB1FDEC60400622E00 /* Launch Screen.storyboard in Resources */,
 				A6D51F9F1F656C7500FA4851 /* MainApp.storyboard in Resources */,
 				A6778BEF1FDEF37500DD9BC8 /* Button.strings in Resources */,
+				E7C3B81E20577D70005075FA /* CRUDViewController.xib in Resources */,
 				A654FABE20529F2C00866E24 /* RealmToDoViewController.xib in Resources */,
 				E7F1CC191FFDF3FE007E6810 /* ScrollKeyboardVViewController.xib in Resources */,
 			);
@@ -1395,6 +1402,7 @@
 				E7FD7E1A1FC6E3640050EB06 /* LocationManager.swift in Sources */,
 				E745C9FA1FF4D6D100DC5496 /* SwipeAnyWhereViewController.swift in Sources */,
 				A6D51FCE1F65792000FA4851 /* UIViewXRadialGarient.swift in Sources */,
+				E7C3B81D20577D70005075FA /* CRUDViewController.swift in Sources */,
 				E7FD7E091FC687730050EB06 /* UserViewViewController.swift in Sources */,
 				E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */,
 				A6D51FBC1F65791400FA4851 /* TabBarX.swift in Sources */,
