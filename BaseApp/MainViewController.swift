@@ -11,6 +11,10 @@ import UIKit
 fileprivate class DataSourceCellMainViewController {
     var name: String?
     var viewControllers = [UIViewController]()
+    
+    init(_ name: String) {
+        self.name = name
+    }
 }
 
 class MainViewController: BaseViewController {
@@ -89,8 +93,7 @@ extension MainViewController {
     
     fileprivate func appendData() {
         /// UIView
-        let views = DataSourceCellMainViewController()
-        views.name = "UIView"
+        let views = DataSourceCellMainViewController("UIView")
         views.viewControllers.append(ExampleAlertViewController.fromNib())
         views.viewControllers.append(ExampleOpenUIPickerController.fromNib())
         views.viewControllers.append(ExampleHideKeyBoardTextFieldViewController.fromNib())
@@ -103,12 +106,10 @@ extension MainViewController {
         views.viewControllers.append(AnimatgionSegueViewController.fromNib())
         views.viewControllers.append(LoadFileViewController.fromNib())
         /// GameSpriteKit
-        let games = DataSourceCellMainViewController()
-        games.name = "GameSpriteKit"
+        let games = DataSourceCellMainViewController("GameSpriteKit")
         games.viewControllers.append(GameViewController.fromNib())
         /// Database
-        let databases = DataSourceCellMainViewController()
-        databases.name = "Database"
+        let databases = DataSourceCellMainViewController("Database")
         databases.viewControllers.append(RealmToDoViewController.fromNib())
         /// TO DO
         self.dataSource.append(views)

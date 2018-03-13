@@ -125,6 +125,8 @@
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
+		E7BC19CE20575E7300656159 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC19CD20575E7300656159 /* Localization.swift */; };
+		E7C3B81A205764F8005075FA /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7C3B819205764F8005075FA /* GameViewController.xib */; };
 		E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */; };
 		E7F1CC101FFDEF6E007E6810 /* KeyboardSmart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */; };
 		E7F1CC111FFDEF6E007E6810 /* KeyboardSmart.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */; };
@@ -307,6 +309,8 @@
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
+		E7BC19CD20575E7300656159 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		E7C3B819205764F8005075FA /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		E7F1CC051FFDE9E6007E6810 /* Extension+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIScrollView.swift"; sourceTree = "<group>"; };
 		E7F1CC0E1FFDEF6E007E6810 /* KeyboardSmart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSmart.swift; sourceTree = "<group>"; };
 		E7F1CC0F1FFDEF6E007E6810 /* KeyboardSmart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardSmart.xib; sourceTree = "<group>"; };
@@ -490,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				A685D9A32053BD70008D710A /* GameViewController.swift */,
+				E7C3B819205764F8005075FA /* GameViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -862,6 +867,14 @@
 			name = OpenOfice;
 			sourceTree = "<group>";
 		};
+		E7BC19CC20575E5800656159 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E7BC19CD20575E7300656159 /* Localization.swift */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
 		E7F1CC041FFDE9D5007E6810 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,6 +899,7 @@
 		E7FD7DF51FC67CB60050EB06 /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				E7BC19CC20575E5800656159 /* Localization */,
 				A66773342052BB6000ECC4A5 /* DatabaseGroup */,
 				A6D51F8A1F65664000FA4851 /* Extensions */,
 				A6D51F8D1F65673400FA4851 /* DesignableX */,
@@ -1100,6 +1114,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C3B81A205764F8005075FA /* GameViewController.xib in Resources */,
 				A6778BDA1FDEEC9200DD9BC8 /* ExampleOpenUIPickerController.xib in Resources */,
 				A6778BDF1FDEF15400DD9BC8 /* ExampleHideKeyBoardTextFieldViewController.xib in Resources */,
 				A6778BE41FDEF2F300DD9BC8 /* MultiLanguageViewController.xib in Resources */,
@@ -1384,6 +1399,7 @@
 				E7F1CC061FFDE9E6007E6810 /* Extension+UIScrollView.swift in Sources */,
 				A6D51FBC1F65791400FA4851 /* TabBarX.swift in Sources */,
 				A6D51FB91F65791400FA4851 /* NavigationBarX.swift in Sources */,
+				E7BC19CE20575E7300656159 /* Localization.swift in Sources */,
 				A6D75D8C1FEDED740091E6D4 /* LoginChatworkRouter.swift in Sources */,
 				A6778BE51FDEF2F300DD9BC8 /* MultiLanguageViewController.swift in Sources */,
 				A6D360BB2053C193007075CB /* GameTextures.swift in Sources */,
