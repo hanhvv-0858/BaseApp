@@ -12,22 +12,22 @@ target 'BaseApp' do
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     #Networking
-    pod 'Alamofire', '~> 4.5'
+    pod 'Alamofire'
     #JSON
     pod 'SwiftyJSON'
     #Binding
-    pod 'ObjectMapper', '~> 2.2'
+    pod 'ObjectMapper'
     #FRP
-    pod 'ReactiveCocoa', '~> 6.0'
+    pod 'ReactiveCocoa'
     #Database
     pod 'RealmSwift'
     #UI-UX
     pod 'RAMAnimatedTabBarController'
     
     #Async Task
-     pod 'PromiseKit', '~> 4.4'
+     pod 'PromiseKit'
     #Multi Language
-    pod 'Localize-Swift', '~> 2.0'
+    pod 'Localize-Swift'
     #Auto Layout
     #pod 'SnapKit'
     #Test
