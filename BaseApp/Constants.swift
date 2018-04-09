@@ -9,7 +9,7 @@
 import SpriteKit
 import UIKit
 
-struct  KeyAccessToKen {
+enum  KeyAccessToKen {
     static let key = "access_token"
 }
 
@@ -26,6 +26,6 @@ let kScreenCenterTop = CGPoint(x: kViewSize.width / 2, y: kViewSize.height * 0.7
 let kDeviceTablet = (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
 
 
-struct GlobalConfig {
+enum GlobalConfig {
     static let dataVersion = 1
 }

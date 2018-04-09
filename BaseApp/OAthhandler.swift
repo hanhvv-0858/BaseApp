@@ -9,7 +9,7 @@
 import Alamofire
 import SwiftyJSON
 
-struct ParamKey {
+enum ParamKey {
     static let clientId                 = "client_id"
     static let clientSecret             = "client_secret"
     static let grantType                = "grant_type"

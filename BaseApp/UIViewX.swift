@@ -52,7 +52,6 @@ class UIViewX: UIView {
     }
     
     // MARK: - Border
-    
     @IBInspectable public var borderColor: UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor
@@ -71,7 +70,6 @@ class UIViewX: UIView {
     }
     
     // MARK: - Shadow
-    
     @IBInspectable public var shadowOpacity: CGFloat = 0 {
         didSet {
             layer.shadowOpacity = Float(shadowOpacity)

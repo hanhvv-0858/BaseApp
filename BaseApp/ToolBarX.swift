@@ -21,19 +21,19 @@ open class ToolBarX: UIToolbar {
         toolBar.tintColor = UIColor.white
         toolBar.sizeToFit()
         // Adding Button ToolBar
-        let doneButton = UIBarButtonItem(title: titleRight, style: .plain, target: self, action: #selector(ToolBarX.doneClick))
+        let doneButton = UIBarButtonItem(title: titleRight, style: .plain, target: self, action: #selector(ToolBarX.rightClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: titleLeft, style: .plain, target: self, action: #selector(ToolBarX.cancelClick))
+        let cancelButton = UIBarButtonItem(title: titleLeft, style: .plain, target: self, action: #selector(ToolBarX.leftClick))
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
     }
     
-    func doneClick() {
+    func rightClick() {
         //do something here
     }
     
-    func cancelClick() {
+    func leftClick() {
         //do something here
     }
 }

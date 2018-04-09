@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct JSONKey {
+enum JSONKey {
     static let userName = "user_name"
     static let id                       = "id"
     static let name                     = "name"

@@ -20,13 +20,13 @@ protocol UploadURLConvertible: URLConvertible {
     func parameters() -> Parameters?
 }
 
-struct HeaderKey {
+enum HeaderKey {
     static let ContentType              = "Content-Type"
     static let Authorization            = "Authorization"
     static let Accept                   = "Accept"
 }
 
-struct HeaderValue {
+enum HeaderValue {
     static let ApplicationJson                     = "application/json"
     static let ApplicationOctetStream              = "application/octet-stream"
     static let ApplicationXWWWFormUrlencoded       = "application/x-www-form-urlencoded"
@@ -101,7 +101,6 @@ struct NetworkManager {
         var defaultHeaders = SessionManager.defaultHTTPHeaders
         defaultHeaders[HeaderKey.Accept] = HeaderValue.ApplicationJson
         defaultHeaders[HeaderKey.ContentType] = HeaderValue.ApplicationJson
-        defaultHeaders["client"] = "iOS-\(version)"
         
         // configuration
         let configuration = URLSessionConfiguration.default

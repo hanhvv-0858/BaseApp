@@ -17,8 +17,17 @@ extension UIView {
 }
 
 extension String {
+    /// Language with current
     var localized: String {
         return Localization.shared.localized(self)
+    }
+    /// Language with English
+    var localizedEn: String {
+        return Localization.shared.en(self)
+    }
+    /// Language with Jappanese
+    var localizedJA: String {
+        return Localization.shared.ja(self)
     }
 }
 
@@ -125,51 +134,53 @@ class Localization {
         case langJA
     }
     
-    let langAppEN = "en"
-    let langAppJA = "ja"
-    let currentLang = "currentLocaleBaseApp"
-    
+    private let langEN = "en"
+    private let langJA = "ja"
+    private let lproj = "lproj"
+    private let currentLang = "currentLocaleBaseApp"
     private var enBundle = Bundle()
     private var jaBundle = Bundle()
-    
-    func getCurrentLocale() -> String {
-        if let locale = UserDefaults.standard.value(forKey: currentLang) as? String {
-            return locale
-        }
-        return langAppEN
-    }
-    
-    func setCurrentLocale(_ lang: Language) {
-        switch lang {
-        case .langEn:
-            UserDefaults.standard.do {
-                $0.set(langAppEN, forKey: currentLang)
-                $0.synchronize()
-            }
-        case .langJA:
-            UserDefaults.standard.do {
-                $0.set(langAppJA, forKey: currentLang)
-                $0.synchronize()
-            }
-        }
-    }
 
     static let shared = Localization()
     
     private init() {
-        if let enBundlePath = Bundle.main.path(forResource: langAppEN, ofType: "lproj"), let bundle = Bundle(path: enBundlePath) {
+        if let enBundlePath = Bundle.main.path(forResource: langEN, ofType: lproj), let bundle = Bundle(path: enBundlePath) {
             enBundle = bundle
         }
-        if let jaBundlePath = Bundle.main.path(forResource: langAppJA, ofType: "lproj"), let bundle = Bundle(path: jaBundlePath) {
+        if let jaBundlePath = Bundle.main.path(forResource: langJA, ofType: lproj), let bundle = Bundle(path: jaBundlePath) {
             jaBundle = bundle
         }
     }
     
+    /// GET currentLocale
+    func getCurrentLocale() -> String {
+        if let locale = UserDefaults.standard.value(forKey: currentLang) as? String {
+            return locale
+        }
+        return langEN
+    }
     
-    func localized(_ key: String) -> String { // return String with currentLocale
+    /// SET current Locale
+    func setCurrentLocale(_ lang: Language) {
+        switch lang {
+        case .langEn:
+            UserDefaults.standard.do {
+                $0.set(langEN, forKey: currentLang)
+                $0.synchronize()
+            }
+        case .langJA:
+            UserDefaults.standard.do {
+                $0.set(langJA, forKey: currentLang)
+                $0.synchronize()
+            }
+        }
+    }
+    
+    /// return String with CurrentLocale
+    func localized(_ key: String) -> String {
         var bundle = Bundle()
         switch getCurrentLocale() {
-        case langAppEN:
+        case langEN:
             bundle = enBundle
         default:
             bundle = jaBundle
@@ -177,26 +188,29 @@ class Localization {
         return NSLocalizedString(key, tableName: nil, bundle: bundle, value: key, comment: key)
     }
     
-    func localized(_ key: String, _ locale: String) -> String { // return String from locale
+    /// return String with english
+    func en(_ key: String) -> String {
+        return localized(key, langEN)
+    }
+    
+    /// return String with Japanese
+    func ja(_ key: String) -> String {
+        return localized(key, langJA)
+    }
+    
+    /// Base return String Localized
+    func localized(_ key: String, _ locale: String) -> String {
         var bundle = Bundle()
         switch locale {
-        case langAppEN:
+        case langEN:
             bundle = enBundle
-        case langAppJA:
+        case langJA:
             bundle = jaBundle
         default:
-            if let langBundlePath = Bundle.main.path(forResource: locale, ofType: "lproj"), let langBundle = Bundle(path: langBundlePath) {
+            if let langBundlePath = Bundle.main.path(forResource: locale, ofType: lproj), let langBundle = Bundle(path: langBundlePath) {
                 bundle = langBundle
             }
         }
         return NSLocalizedString(key, tableName: nil, bundle: bundle, value: key, comment: key)
-    }
-    
-    func en(_ key: String) -> String { // retun String EN
-        return NSLocalizedString(key, tableName: nil, bundle: enBundle, value: key, comment: key)
-    }
-    
-    func ja(_ key: String) -> String { // return String JA
-        return NSLocalizedString(key, tableName: nil, bundle: jaBundle, value: key, comment: key)
     }
 }

@@ -123,6 +123,8 @@
 		E7720B5E2019DD04005E95ED /* ListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7720B5D2019DD04005E95ED /* ListData.plist */; };
 		E78856CB1FFC668C00420F90 /* OpenOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */; };
 		E78856CC1FFC668C00420F90 /* OpenOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */; };
+		E7A199D5207B06C000C61071 /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A199D4207B06C000C61071 /* Extension+UITextView.swift */; };
+		E7A199D7207B070D00C61071 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A199D6207B070D00C61071 /* Extension+Date.swift */; };
 		E7A7DBA91FF22ED200481A2A /* ResponseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */; };
 		E7AA66DD1FDF862300C589D2 /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */; };
 		E7BC19CE20575E7300656159 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC19CD20575E7300656159 /* Localization.swift */; };
@@ -309,6 +311,8 @@
 		E7720B5D2019DD04005E95ED /* ListData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ListData.plist; sourceTree = "<group>"; };
 		E78856C91FFC668C00420F90 /* OpenOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenOfficeViewController.swift; sourceTree = "<group>"; };
 		E78856CA1FFC668C00420F90 /* OpenOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenOfficeViewController.xib; sourceTree = "<group>"; };
+		E7A199D4207B06C000C61071 /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
+		E7A199D6207B070D00C61071 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		E7A7DBA81FF22ED200481A2A /* ResponseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUIViewController.swift; sourceTree = "<group>"; };
 		E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 		E7BC19CD20575E7300656159 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -942,6 +946,8 @@
 				E70BB6CB1FC7ED6B00E77A52 /* Extension+UIFont.swift */,
 				E7AA66DC1FDF862300C589D2 /* Extension+UIAlertController.swift */,
 				E7720B4E20198440005E95ED /* Extension+UIStoryboard.swift */,
+				E7A199D4207B06C000C61071 /* Extension+UITextView.swift */,
+				E7A199D6207B070D00C61071 /* Extension+Date.swift */,
 			);
 			name = UKit;
 			sourceTree = "<group>";
@@ -1373,6 +1379,7 @@
 				E7FD7DF81FC680320050EB06 /* Extension+MKMapView.swift in Sources */,
 				A654FAC120529F8000866E24 /* ToDoItem.swift in Sources */,
 				E745C9FF1FF4D71300DC5496 /* SwipeAnimation.swift in Sources */,
+				E7A199D7207B070D00C61071 /* Extension+Date.swift in Sources */,
 				A6D51F9B1F656A6000FA4851 /* LoginViewController.swift in Sources */,
 				E7FD7E151FC6996F0050EB06 /* Extension+UIPickerController.swift in Sources */,
 				E7FD7DF21FC67A2F0050EB06 /* Extension+UIView.swift in Sources */,
@@ -1412,6 +1419,7 @@
 				A6778BE51FDEF2F300DD9BC8 /* MultiLanguageViewController.swift in Sources */,
 				A6D360BB2053C193007075CB /* GameTextures.swift in Sources */,
 				E7FD7E0E1FC68A050050EB06 /* UserTableViewCell.swift in Sources */,
+				E7A199D5207B06C000C61071 /* Extension+UITextView.swift in Sources */,
 				E7FD7E001FC682F90050EB06 /* ConfigAlamofire.swift in Sources */,
 				A66773362052BB7900ECC4A5 /* DatabaseGroup.swift in Sources */,
 				A67B49D51FDFEE8300F81588 /* ExampleKVOViewController.swift in Sources */,

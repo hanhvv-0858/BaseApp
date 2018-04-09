@@ -25,3 +25,32 @@ func loadFilePlist(forResource: String, ofType: String, _ completionHandler: @es
         }
     }
 }
+
+func objectFromString(_ json: String?) -> [String: Any]? {
+    if let js = json, !js.isEmpty {
+        if let jsonData = js.data(using: .utf8) {
+            do {
+                let raw = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                return raw as? [String: Any]
+            } catch _ {
+            }
+        }
+    }
+    
+    return nil
+}
+
+func collectionObjectFromString(_ json: String?) -> [[String: Any]]? {
+    if let js = json, !js.isEmpty {
+        if let jsonData = js.data(using: .utf8) {
+            do {
+                let raw = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                return raw as? [[String: Any]]
+            } catch _ {
+            }
+        }
+    }
+    return nil
+}
+
+
