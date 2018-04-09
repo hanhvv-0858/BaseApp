@@ -10,8 +10,13 @@ import UIKit
 
 class AnimatgionSegueViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.limitCharacter = 5
+        textView.textViewClosure = { text in
+            logD(text)
+        }
 
         // Do any additional setup after loading the view.
     }
