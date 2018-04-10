@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V6y-as-JJh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="nXU-dT-6TC">
+            <objects>
+                <viewController id="Opd-u9-auv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3i-p6-jSf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aHm-i9-35x"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Settings" id="wgo-3a-Usd" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="gXV-vB-pH6" id="yh1-38-5Y1"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJT-MU-fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gXV-vB-pH6" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="413"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="j7C-7U-AcP">
+            <objects>
+                <viewController id="Hjf-RV-rNY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0XS-cy-xwD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fC6-MS-qVs"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="Settings" id="7Hi-1z-iCF" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="Vcn-hP-WmC" id="uyH-lU-Dhq"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uR4-Y5-Ge4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Vcn-hP-WmC" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="-251"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="hKf-iz-GtL">
+            <objects>
+                <tabBarController storyboardIdentifier="RAMAnimatedTabBarController" id="V6y-as-JJh" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dai-xe-RBm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hjf-RV-rNY" kind="relationship" relationship="viewControllers" id="ZPR-V5-Frl"/>
+                        <segue destination="Opd-u9-auv" kind="relationship" relationship="viewControllers" id="KZ9-ii-4wn"/>
+                        <segue destination="rNE-Xn-GxO" kind="relationship" relationship="viewControllers" id="WGx-Vl-4HU"/>
+                        <segue destination="zfs-B3-bCI" kind="relationship" relationship="viewControllers" id="70u-wG-tCf"/>
+                        <segue destination="K8U-CM-XjI" kind="relationship" relationship="viewControllers" id="MSs-zo-vQY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVX-GP-XOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="81"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="f1M-KV-NcJ">
+            <objects>
+                <viewController id="K8U-CM-XjI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s17-fo-mEC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NS8-2A-uDR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Settings" id="lUx-TN-9mG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="6zZ-Wl-dWl" id="Y81-4g-6f1"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EV8-VR-5wP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6zZ-Wl-dWl" customClass="RAMFlipBottomTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="-601"/>
+        </scene>
+        <!--Apps-->
+        <scene sceneID="mNs-ax-PGM">
+            <objects>
+                <viewController id="zfs-B3-bCI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pz2-kU-HKq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XOA-GX-spa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Apps" image="Settings" id="8bN-LY-v3n" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="v2Z-lG-mQ3" id="Sp8-E4-aI2"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aW5-nf-oV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="v2Z-lG-mQ3" customClass="RAMFlipBottomTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="230"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="uhN-6I-iLj">
+            <objects>
+                <viewController id="rNE-Xn-GxO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3wi-ex-kNo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DaC-Do-7pY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Videos" image="Settings" id="QM9-Lr-kT5" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="9cc-PX-8vd" id="SXA-UZ-V9y"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gg-OQ-fCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="9cc-PX-8vd" customClass="RAMFlipRightTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="912"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Settings" width="30" height="30"/>
+    </resources>
+</document>

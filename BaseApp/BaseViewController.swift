@@ -16,13 +16,11 @@ class BaseViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUIWithBase()
-        registerObserverWithBase()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUIWithBase()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,47 +36,11 @@ class BaseViewController: UIViewController {
     }
     
     deinit {
-        removeObserverWithBase()
+
     }
     
     // MARK: - Override
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
-    }
-    
-    // MARK: - IBAction
-    @IBAction func btnX(_ sender: Any) {
-        print(#function)
-    }
-}
-
-// MARK: Delegate
-extension BaseViewController: UITextFieldDelegate {
-    
-}
-
-// MARK: - Call API
-extension BaseViewController {
-    
-}
-
-
-// MARK: - Methods Extension
-extension BaseViewController {
-    
-    func updateUIWithBase() {
-        
-    }
-    
-    func setupUIWithBase() {
-        
-    }
-    
-    func registerObserverWithBase() {
-        
-    }
-    
-    func removeObserverWithBase() {
         
     }
 }

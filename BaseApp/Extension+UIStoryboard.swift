@@ -11,8 +11,6 @@ import UIKit
 extension UIStoryboard {
     enum StoryboardName: String {
         case main = "Main"
-        case mainApp = "MainApp"
-        case loginRegister = "LoginRegister"
     }
     
     convenience init(storyboard: StoryboardName, bundle: Bundle? = nil) {

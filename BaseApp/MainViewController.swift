@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 fileprivate class DataSourceCellMainViewController {
     var name: String?
@@ -33,12 +34,7 @@ class MainViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if checkUser() { /// if co user call API...
-            appendData()
-        } else {
-            gotoLogin() /// if khong co -> Login
-        }
+        checkIfUserIsLoggedIn()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -52,29 +48,38 @@ class MainViewController: BaseViewController {
     // MARK: - Override
     
     // MARK: - IBAction
-    @IBAction func btnLogOut(_ sender: Any) {
-        /// remove Data
-        /// load LoginView
-        UserDefaults.standard.removeObject(forKey: KeyAccessToKen.key)
-        DatabaseGroup.shared.removeAllRealmData()
-        gotoLogin()
-    }
 }
 
 
 // MARK: - UI Private Methods Extensions
 extension MainViewController {
     
-    fileprivate func checkUser() -> Bool {
-        return UserDefaults.standard.value(forKey: KeyAccessToKen.key) == nil ? false : true
+    fileprivate func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser?.uid == nil {
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+            appendData()
+        }
+    }
+    
+    @objc fileprivate func handleLogout() {
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            logD(error)
+        }
+        gotoLogin()
     }
     
     fileprivate func setupUI() {
         self.navigationItem.title = setupAppVersion()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        self.tableView.tableFooterView = UIView()
     }
     
     fileprivate func gotoLogin() {
-        let loginVC = LoginViewController.fromStoryboard(.loginRegister)
+        let loginVC = LoginViewController()
         self.present(loginVC)
     }
     
@@ -92,30 +97,6 @@ extension MainViewController {
     }
     
     fileprivate func appendData() {
-        /// UIView
-        let views = DataSourceCellMainViewController("UIView")
-        views.viewControllers.append(ExampleAlertViewController.fromNib())
-        views.viewControllers.append(ExampleOpenUIPickerController.fromNib())
-        views.viewControllers.append(ExampleHideKeyBoardTextFieldViewController.fromNib())
-        views.viewControllers.append(MultiLanguageViewController.fromNib())
-        views.viewControllers.append(ExampleTargetClosureViewController.fromNib())
-        views.viewControllers.append(ExampleKVOViewController.fromNib())
-        views.viewControllers.append(OpenOfficeViewController.fromNib())
-        views.viewControllers.append(KeyboardSmart.fromNib())
-        views.viewControllers.append(ScrollKeyboardVViewController.fromNib())
-        views.viewControllers.append(AnimatgionSegueViewController.fromNib())
-        views.viewControllers.append(LoadFileViewController.fromNib())
-        /// GameSpriteKit
-        let games = DataSourceCellMainViewController("GameSpriteKit")
-        games.viewControllers.append(GameViewController.fromNib())
-        /// Database
-        let databases = DataSourceCellMainViewController("Database")
-        databases.viewControllers.append(CRUDViewController.fromNib())
-        databases.viewControllers.append(RealmToDoViewController.fromNib())
-        /// TO DO
-        self.dataSource.append(views)
-        self.dataSource.append(games)
-        self.dataSource.append(databases)
         tableView.reloadData()
     }
     
@@ -132,7 +113,6 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
-    
 }
 
 extension MainViewController: UITableViewDataSource {

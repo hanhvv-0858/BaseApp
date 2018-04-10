@@ -33,7 +33,10 @@ class Swipe: NSObject {
         commonInit()
     }
     
-    func commonInit() {
+    func commonInit(_ navigationController: UINavigationController? = nil) {
+        if  let navigationController = navigationController {
+            self.navigationController = navigationController
+        }
         let panRecognizer = SwipeGestureRecognizer(target: self, action: #selector(self.pan))
         panRecognizer.direction = .right
         panRecognizer.maximumNumberOfTouches = 1

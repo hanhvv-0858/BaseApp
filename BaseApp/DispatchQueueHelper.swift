@@ -22,7 +22,6 @@ class DispatchQueueHelper {
         dispatchQueue = DispatchQueue(label: label)
         dispatchSemaphore = DispatchSemaphore(value: value)
     }
-    
 }
 
 extension DispatchQueueHelper {

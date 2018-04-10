@@ -11,10 +11,31 @@ import UIKit
 // MARK: - Extension UITextView + Placehoulder
 public typealias TextViewClosure = (String?) -> Void
 fileprivate var addressKeyLimitCharacter = 1
-fileprivate var addressKeyTextViewClosure = 2
+fileprivate var closureAdapter = 2
 fileprivate var addressColorPlaceholder = 101
+
+fileprivate final class ClosuresWrapper {
+    fileprivate var didFinishPickingMedia: TextViewClosure?
+}
+
 extension UITextView: UITextViewDelegate {
 
+    fileprivate var closuresWrapper: ClosuresWrapper {
+        get {
+            if let wrapper = objc_getAssociatedObject(self, &closureAdapter) as? ClosuresWrapper {
+                return wrapper
+            }
+            let closuresWrapper = ClosuresWrapper()
+            self.closuresWrapper = closuresWrapper
+            return closuresWrapper
+        }
+        set {
+            self.delegate = self
+            objc_setAssociatedObject(self, &closureAdapter, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    
     public var limitCharacter: Int? {
         get {
             if let number = objc_getAssociatedObject(self, &addressKeyLimitCharacter) as? Int {
@@ -28,15 +49,8 @@ extension UITextView: UITextViewDelegate {
     }
     
     public var textViewClosure: TextViewClosure? {
-        get {
-            if let wrapper = objc_getAssociatedObject(self, &addressKeyTextViewClosure) as? TextViewClosure {
-                return wrapper
-            }
-            return nil
-        }
-        set {
-            objc_setAssociatedObject(self, &addressKeyTextViewClosure, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+        get { return closuresWrapper.didFinishPickingMedia }
+        set { closuresWrapper.didFinishPickingMedia = newValue }
     }
 
     private enum Keys {

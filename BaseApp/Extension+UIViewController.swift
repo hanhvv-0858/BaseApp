@@ -60,6 +60,7 @@ extension UIViewController {
         let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
         ai.startAnimating()
         ai.center = spinnerView.center
+        ai.hidesWhenStopped = true
         DispatchQueue.main.async {
             spinnerView.addSubview(ai)
             self.view.addSubview(spinnerView)
@@ -67,9 +68,17 @@ extension UIViewController {
         return spinnerView
     }
     
-    func removeSpinner(_ spinner: UIView) {
+    func hideSpinner() {
+        for view in showSpinner().subviews {
+            if let ai = view as? UIActivityIndicatorView {
+                ai.stopAnimating()
+            }
+        }
+    }
+    
+    func removeSpinner() {
         DispatchQueue.main.async {
-            spinner.removeFromSuperview()
+            self.showSpinner().removeFromSuperview()
         }
     }
 }

@@ -11,21 +11,17 @@ target 'BaseApp' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
+    pod 'GoogleSignIn'
     #Networking
     pod 'Alamofire'
     #JSON
     pod 'SwiftyJSON'
-    #Binding
-    pod 'ObjectMapper'
-    #FRP
+    #FPR
     pod 'ReactiveCocoa'
     #Database
     pod 'RealmSwift'
     #UI-UX
     pod 'RAMAnimatedTabBarController'
-    
-    #Async Task
-     pod 'PromiseKit'
     #Multi Language
     pod 'Localize-Swift'
     #Auto Layout
@@ -33,6 +29,7 @@ target 'BaseApp' do
     #Test
     #pod 'Quick'
     #pod 'Nimble'
+    pod 'IBAnimatable'
     
     target 'BaseAppTests' do
         inherit! :search_paths
